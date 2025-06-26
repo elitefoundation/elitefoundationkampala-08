@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -11,16 +12,16 @@ import {
 } from '../data/structuredData';
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'KAWEESA CHILDREN\'S MINISTRY LIMITED - Transforming Lives Through Love and Care',
-  description = 'KAWEESA CHILDREN\'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs.',
+  title = 'Elite Foundation - Transforming Lives Through Excellence and Care',
+  description = 'Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
-  name = 'KAWEESA CHILDREN\'S MINISTRY LIMITED',
+  name = 'Elite Foundation',
   imageUrl = '/lovable-uploads/d4aa9dda-f549-4c67-92aa-5a86592a3467.png',
   publishDate,
   modifiedDate,
   author,
   category,
-  keywords = ['children ministry', 'Uganda foundation', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization'],
+  keywords = ['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization'],
   isBlogPost = false
 }) => {
   const location = useLocation();
@@ -73,12 +74,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="KAWEESA CHILDREN'S MINISTRY LIMITED" />
+      <meta property="og:site_name" content="Elite Foundation" />
       <meta property="og:locale" content="en_US" />
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {isBlogPost && <meta property="article:publisher" content="https://kaweesachildrensministry.org" />}
+      {isBlogPost && <meta property="article:publisher" content="https://elitefoundation.org" />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

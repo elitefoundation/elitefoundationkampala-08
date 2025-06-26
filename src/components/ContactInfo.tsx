@@ -20,7 +20,7 @@ const ContactInfo = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Ministry Contact Info */}
+          {/* Foundation Contact Info */}
           <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-200">
             <div className="flex flex-col items-center text-center">
               <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mb-4">
@@ -34,7 +34,7 @@ const ContactInfo = () => {
                   className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  +256 772 477 774
+                  +1 (555) 123-4567
                 </button>
               </div>
             </div>
@@ -54,7 +54,7 @@ const ContactInfo = () => {
                   className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  info@kaweesaministry.org
+                  info@elitefoundation.org
                 </button>
               </div>
             </div>
@@ -68,8 +68,8 @@ const ContactInfo = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-2">Kampala, Uganda</p>
-              <p className="text-gray-500 text-sm">P.O. Box 12345, Central Division</p>
+              <p className="text-gray-600 mb-2">Global Operations Center</p>
+              <p className="text-gray-500 text-sm">Excellence in Action Worldwide</p>
             </div>
             <button 
               onClick={() => redirectToWhatsApp("general")}

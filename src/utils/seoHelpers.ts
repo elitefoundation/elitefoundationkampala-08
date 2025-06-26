@@ -1,17 +1,16 @@
 
-export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://kaweesachildrensministries.org'): string => {
+export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://elitefoundation.org'): string => {
   return path.startsWith('http') ? path : `${baseUrl}${path}`;
 };
 
 export const enhanceKeywords = (pathname: string, baseKeywords: string[]): string[] => {
-  if (pathname.includes('education-center-kampala')) {
+  if (pathname.includes('education-center')) {
     return [
       ...baseKeywords,
-      'education center',
-      'Kampala schools',
-      'children education Uganda',
-      'learning facilities',
+      'education programs',
       'quality education',
+      'children education',
+      'learning facilities',
       'educational support',
       'school programs',
       'academic excellence',
@@ -20,17 +19,17 @@ export const enhanceKeywords = (pathname: string, baseKeywords: string[]): strin
     ];
   }
   
-  if (pathname.includes('health-screening-children')) {
+  if (pathname.includes('health-screening')) {
     return [
       ...baseKeywords,
-      'health screening',
-      'children health Uganda',
-      'medical checkups',
-      'vaccinations',
+      'health programs',
+      'children health',
+      'medical care',
+      'health services',
       'health education',
       'preventive healthcare',
       'child health programs',
-      'medical outreach',
+      'medical support',
       'healthcare access',
       'community health'
     ];

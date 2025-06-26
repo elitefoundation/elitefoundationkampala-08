@@ -1,3 +1,4 @@
+
 import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -36,8 +37,8 @@ const Footer = () => {
       const templateParams = {
         from_name: "Newsletter Subscriber",
         from_email: email,
-        message: `New newsletter subscription request from the KAWEESA Children's Ministry website.`,
-        to_name: 'KAWEESA Ministry Team',
+        message: `New newsletter subscription request from the Elite Foundation website.`,
+        to_name: 'Elite Foundation Team',
         reply_to: email
       };
       
@@ -78,28 +79,28 @@ const Footer = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-orange-400">KAWEESA CHILDREN'S MINISTRY</h3>
+              <h3 className="text-2xl font-bold mb-4 text-orange-400">ELITE FOUNDATION</h3>
               <p className="text-gray-300 mb-6">
-                Transforming lives through love and care. We are dedicated to nurturing, protecting, and empowering children in Uganda through comprehensive programs that address their educational, health, and developmental needs.
+                Transforming lives through excellence and care. We are dedicated to nurturing, protecting, and empowering children through comprehensive programs that address their educational, health, and developmental needs.
               </p>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>Kampala, Uganda</span>
+                  <span>Global Operations</span>
                 </div>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
                   className="flex items-center hover:text-orange-400 transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>info@kaweesaministry.org</span>
+                  <span>info@elitefoundation.org</span>
                 </button>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
                   className="flex items-center hover:text-orange-400 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>+256 772 477 774</span>
+                  <span>+1 (555) 123-4567</span>
                 </button>
               </div>
             </div>
@@ -156,10 +157,10 @@ const Footer = () => {
           <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-gray-400 text-sm mb-2">
-                © {new Date().getFullYear()} KAWEESA CHILDREN'S MINISTRY LIMITED. All rights reserved.
+                © {new Date().getFullYear()} Elite Foundation. All rights reserved.
               </p>
               <p className="text-gray-400 text-sm">
-                Registration Number: 80020002328043 | Company Limited by Guarantee
+                Registered Non-Profit Organization | Excellence in Action
               </p>
             </div>
             <div className="flex space-x-6">

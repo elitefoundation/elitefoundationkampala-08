@@ -13,15 +13,15 @@ const About = () => {
 
   const leaders = [
     {
-      name: "Kaweesa Medard",
+      name: "Dr. Sarah Mitchell",
       role: "Founder & Executive Director",
-      bio: "5+ years in child welfare and community development",
+      bio: "10+ years in international development and child welfare",
       image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
-      name: "Rachael Namuwenge",
+      name: "Michael Thompson",
       role: "Program Director",
-      bio: "Education specialist with focus on rural development",
+      bio: "Education specialist with focus on global development",
       image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
     }
   ];
@@ -42,7 +42,7 @@ const About = () => {
               transition={{ duration: 0.5 }} 
               className="text-4xl font-bold mb-6"
             >
-              About KAWEESA CHILDREN'S MINISTRY LIMITED
+              About Elite Foundation
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
@@ -52,7 +52,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }} 
                 className="text-xl text-gray-600 mb-12"
               >
-                KAWEESA CHILDREN'S MINISTRY LIMITED is a registered foundation in Uganda dedicated to transforming the lives of children through comprehensive care, education, and community development programs.
+                Elite Foundation is a registered organization dedicated to transforming the lives of children through comprehensive care, education, and community development programs worldwide.
               </motion.p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -64,8 +64,8 @@ const About = () => {
                 >
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                   <p className="text-gray-600">
-                    To provide holistic care, quality education, and protection for children in Uganda, 
-                    empowering them to reach their full potential and become productive members of society.
+                    To provide holistic care, quality education, and protection for children worldwide, 
+                    empowering them to reach their full potential and become productive members of society through excellence in every program we deliver.
                   </p>
                 </motion.div>
                 
@@ -77,22 +77,22 @@ const About = () => {
                 >
                   <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                   <p className="text-gray-600 mb-6">
-                    A Uganda where every child has access to quality education, healthcare, protection, 
-                    and opportunities to thrive in a nurturing and supportive environment.
+                    A world where every child has access to quality education, healthcare, protection, 
+                    and opportunities to thrive in a nurturing and supportive environment through excellence in action.
                   </p>
                   <h4 className="text-xl font-bold mb-4">Our Core Values</h4>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Love & Compassion:</strong> Treating every child with unconditional love and understanding</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Community Partnership:</strong> Working together with families and communities for sustainable impact</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                       <span><strong>Excellence:</strong> Committed to providing the highest quality programs and services</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Innovation:</strong> Using cutting-edge approaches to maximize impact and sustainability</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
+                      <span><strong>Global Partnership:</strong> Working together with communities worldwide for sustainable change</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -107,24 +107,24 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm mb-8">
                   <p className="text-gray-600 mb-4">
-                    Founded with a heart for Uganda's most vulnerable children, KAWEESA CHILDREN'S MINISTRY LIMITED 
-                    began as a grassroots initiative to address the immediate needs of children in our local communities.
+                    Founded with a vision for global excellence in child welfare, Elite Foundation 
+                    began as an ambitious initiative to address the critical needs of children worldwide through innovative, high-quality programs.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    Over the years, we have grown from helping a handful of children to supporting hundreds of families 
-                    across multiple communities. Our comprehensive approach addresses not just immediate needs but works 
-                    to create sustainable, long-term solutions.
+                    Over the years, we have grown from a small team with big dreams to a globally recognized organization 
+                    supporting thousands of children and families across multiple continents. Our comprehensive approach addresses 
+                    both immediate needs and long-term sustainable solutions.
                   </p>
                   <p className="text-gray-600">
-                    Today, we continue to expand our reach while maintaining our core commitment to treating every child 
-                    with dignity, respect, and love. We work closely with local communities, schools, and healthcare 
-                    providers to ensure our programs make a lasting impact.
+                    Today, we continue to expand our reach while maintaining our core commitment to excellence in every aspect 
+                    of our work. We collaborate with local communities, international partners, schools, and healthcare 
+                    providers to ensure our programs create lasting, transformative impact.
                   </p>
                 </div>
 
                 <h3 className="text-2xl font-bold mb-6">Meet Our Leadership</h3>
                 <p className="text-gray-600 mb-8 text-center">
-                  Dedicated professionals committed to transforming children's lives through experienced leadership and passionate service
+                  Visionary leaders committed to excellence in child welfare through experienced leadership and innovative approaches
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -160,17 +160,17 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="mb-16"
               >
-                <h2 className="text-3xl font-bold mb-6">Registration Details</h2>
+                <h2 className="text-3xl font-bold mb-6">Organization Details</h2>
                 <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-8 border border-orange-200 text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Official Registration Information</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Official Organization Information</h3>
                   <p className="text-gray-800 mb-2 font-semibold">
-                    <strong className="text-gray-900">Company Registration Number:</strong> 80020002328043
+                    <strong className="text-gray-900">Status:</strong> Registered Non-Profit Organization
                   </p>
                   <p className="text-gray-800 mb-2 font-semibold">
-                    <strong className="text-gray-900">Registered Office:</strong> Kampala, Uganda
+                    <strong className="text-gray-900">Operations:</strong> Global Outreach Programs
                   </p>
                   <p className="text-gray-800 font-semibold">
-                    <strong className="text-gray-900">Type:</strong> Company Limited by Guarantee (Non-Profit)
+                    <strong className="text-gray-900">Mission:</strong> Excellence in Action for Children Worldwide
                   </p>
                 </div>
               </motion.div>
@@ -184,16 +184,16 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 text-center">
-                    <h4 className="font-bold text-blue-900 mb-2">Location</h4>
-                    <p className="text-blue-800">Kampala, Uganda</p>
+                    <h4 className="font-bold text-blue-900 mb-2">Global Operations</h4>
+                    <p className="text-blue-800">Worldwide Presence</p>
                   </div>
                   <div className="bg-green-50 rounded-xl p-6 border border-green-200 text-center">
                     <h4 className="font-bold text-green-900 mb-2">Email</h4>
-                    <p className="text-green-800">info@kaweesaministry.org</p>
+                    <p className="text-green-800">info@elitefoundation.org</p>
                   </div>
                   <div className="bg-orange-50 rounded-xl p-6 border border-orange-200 text-center">
                     <h4 className="font-bold text-orange-900 mb-2">Phone</h4>
-                    <p className="text-orange-800">+256 772 477 774</p>
+                    <p className="text-orange-800">+1 (555) 123-4567</p>
                   </div>
                 </div>
               </motion.div>

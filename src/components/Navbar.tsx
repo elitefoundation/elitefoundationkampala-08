@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   const handleDonateClick = () => {
-    window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+    window.open("https://www.paypal.me/EliteFoundation", '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -47,7 +47,7 @@ const Navbar = () => {
                 "text-lg sm:text-xl font-bold transition-colors duration-300",
                 isScrolled ? "text-gray-900" : "text-white"
               )}>
-                KAWEESA CHILDREN'S MINISTRIES
+                ELITE FOUNDATION
               </span>
             </Link>
           </div>

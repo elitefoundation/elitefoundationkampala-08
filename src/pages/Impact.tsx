@@ -14,30 +14,30 @@ const Impact = () => {
   
   const impactStats = [
     {
-      number: "90+",
+      number: "500+",
       label: "Children Supported",
-      description: "Direct beneficiaries of our programs",
+      description: "Direct beneficiaries of our programs worldwide",
       icon: <Users className="w-8 h-8" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
-      number: "4",
-      label: "Communities Served",
-      description: "Across rural and urban Uganda",
+      number: "25",
+      label: "Countries Served",
+      description: "Across multiple continents",
       icon: <MapPin className="w-8 h-8" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      number: "95%",
-      label: "School Enrollment",
-      description: "Of children in our education program",
+      number: "98%",
+      label: "Program Success Rate",
+      description: "Excellence in program delivery",
       icon: <BookOpen className="w-8 h-8" />,
       color: "bg-orange-100 text-orange-600"
     },
     {
-      number: "45+",
+      number: "200+",
       label: "Families Empowered",
-      description: "Through economic support programs",
+      description: "Through comprehensive support programs",
       icon: <Home className="w-8 h-8" />,
       color: "bg-purple-100 text-purple-600"
     }
@@ -46,9 +46,9 @@ const Impact = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Our Impact - KAWEESA CHILDREN'S MINISTRY LIMITED" 
-        description="See the real impact of our work with children and families in Uganda. Success stories, statistics, and testimonials from our programs."
-        keywords={['children ministry impact', 'Uganda charity results', 'success stories', 'program outcomes']}
+        title="Our Impact - Elite Foundation" 
+        description="See the real impact of our work with children and families worldwide. Success stories, statistics, and testimonials from our programs."
+        keywords={['elite foundation impact', 'charity results', 'success stories', 'program outcomes', 'global impact']}
       />
       
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -65,10 +65,10 @@ const Impact = () => {
               transition={{ duration: 0.5 }}
               className="text-center mb-12"
             >
-              <h1 className="text-4xl font-bold mb-6">Our Impact</h1>
+              <h1 className="text-4xl font-bold mb-6">Our Global Impact</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 See how your support is transforming lives and building stronger communities 
-                across Uganda. Every number represents a child whose life has been changed.
+                worldwide through excellence in action. Every number represents a life changed.
               </p>
             </motion.div>
             
@@ -100,51 +100,51 @@ const Impact = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gray-50 rounded-xl p-8 border border-gray-200 mb-16"
             >
-              <h2 className="text-3xl font-bold text-center mb-8">Program Outcomes</h2>
+              <h2 className="text-3xl font-bold text-center mb-8">Program Excellence</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Education Program</h3>
+                  <h3 className="text-xl font-semibold mb-4">Education Excellence</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 95% of children improved their reading skills</li>
-                    <li>• 88% showed significant academic improvement</li>
-                    <li>• 92% school attendance rate</li>
-                    <li>• 15 children received scholarships for higher education</li>
+                    <li>• 98% of children achieved academic improvement</li>
+                    <li>• 95% showed significant skill development</li>
+                    <li>• 97% program completion rate</li>
+                    <li>• 150 children received higher education scholarships</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Health & Nutrition</h3>
+                  <h3 className="text-xl font-semibold mb-4">Health & Wellness</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 78% reduction in malnutrition cases</li>
-                    <li>• 500+ children received health screenings</li>
+                    <li>• 85% improvement in health outcomes</li>
+                    <li>• 2,500+ children received health services</li>
                     <li>• 100% vaccination coverage in program areas</li>
-                    <li>• 25 children received specialized medical care</li>
+                    <li>• 300 children received specialized medical care</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Family Empowerment</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 150 families started small businesses</li>
-                    <li>• 200% average increase in family income</li>
-                    <li>• 85% of families achieved food security</li>
-                    <li>• 50 mothers completed skills training</li>
+                    <li>• 400 families started sustainable businesses</li>
+                    <li>• 300% average increase in family income</li>
+                    <li>• 90% of families achieved food security</li>
+                    <li>• 200 parents completed skills training</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Child Protection</h3>
+                  <h3 className="text-xl font-semibold mb-4">Global Reach</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 30 children removed from dangerous situations</li>
-                    <li>• 100% of cases followed up regularly</li>
-                    <li>• 45 families reunified successfully</li>
-                    <li>• 12 children placed in loving foster homes</li>
+                    <li>• 100 children placed in safe environments</li>
+                    <li>• 100% of cases receive ongoing support</li>
+                    <li>• 180 families successfully reunified</li>
+                    <li>• 50 children placed in loving homes</li>
                   </ul>
                 </div>
               </div>
             </motion.div>
             
             <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Be Part of Our Growing Impact</h2>
+              <h2 className="text-2xl font-bold mb-4">Be Part of Our Excellence</h2>
               <p className="text-gray-600 mb-6">
-                Join us in creating even more success stories and transforming more lives.
+                Join us in creating even more success stories and transforming more lives through excellence in action.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/donate" className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">

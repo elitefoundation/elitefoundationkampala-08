@@ -28,10 +28,10 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO 
-        title="KAWEESA CHILDREN'S MINISTRY LIMITED - Transforming Lives Through Love and Care" 
-        description="KAWEESA CHILDREN'S MINISTRY LIMITED is a Ugandan foundation dedicated to improving the lives of children through education, health, protection, and community development programs."
+        title="Elite Foundation - Transforming Lives Through Excellence and Care" 
+        description="Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs."
         imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
-        keywords={['children ministry', 'Uganda foundation', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
+        keywords={['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
       />
       <Hero />
       <PhotoGallery />
