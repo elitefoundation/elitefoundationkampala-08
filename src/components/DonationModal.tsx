@@ -19,7 +19,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
     accountNumber: "1011101249360",
     swiftCode: "EQBLUGKAXXX",
     bankName: "Equity Bank Uganda Ltd",
-    accountName: "KAWEESA CHILDREN'S MINISTRY LIMITED"
+    accountName: "ELITE FOUNDATION"
   };
 
   const copyToClipboard = async (text: string, field: string) => {
@@ -61,7 +61,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
             Choose Your Donation Method
           </DialogTitle>
           <p className="text-gray-600 text-center">
-            {amount ? `Donate ${amount}` : 'Make a donation'} to support vulnerable children in Uganda
+            {amount ? `Donate ${amount}` : 'Make a donation'} to support vulnerable children worldwide
           </p>
         </DialogHeader>
 
@@ -161,7 +161,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
             <li>• The SWIFT code identifies Equity Bank Uganda for international transfers</li>
             <li>• "XXX" in the code represents the specific branch identifier</li>
             <li>• "EQBLUGKA" identifies Equity Bank Uganda Ltd</li>
-            <li>• Please include your name and "KAWEESA DONATION" in the transfer reference</li>
+            <li>• Please include your name and "ELITE FOUNDATION DONATION" in the transfer reference</li>
             <li>• Transfer fees may apply depending on your bank</li>
           </ul>
         </div>

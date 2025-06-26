@@ -69,7 +69,7 @@ const Hero = () => {
             <motion.div className="w-full max-w-4xl text-center" variants={itemVariants}>
               <motion.h1 className="banner-title text-white" variants={itemVariants}>Transforming Lives Through Love and Care</motion.h1>
               <motion.p className="banner-subtitle text-gray-300 mt-4 sm:mt-6" variants={itemVariants}>
-                KAWEESA CHILDREN'S MINISTRY LIMITED is dedicated to nurturing, protecting, and empowering children in Uganda through comprehensive programs that address their educational, health, and developmental needs.
+                Elite Foundation is dedicated to nurturing, protecting, and empowering children worldwide through comprehensive programs that address their educational, health, and developmental needs.
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
                 <button 

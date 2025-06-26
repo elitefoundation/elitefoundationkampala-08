@@ -1,3 +1,4 @@
+
 import { Heart, Users, Target, Globe } from "lucide-react";
 
 const AboutMinistry = () => {
@@ -12,7 +13,7 @@ const AboutMinistry = () => {
             Our Mission & Vision
           </h2>
           <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            KAWEESA CHILDREN'S MINISTRY LIMITED is a registered foundation in Uganda dedicated to transforming the lives of children through comprehensive care, education, and community development programs.
+            Elite Foundation is a dedicated organization committed to transforming the lives of children through comprehensive care, education, and community development programs.
           </p>
         </div>
 
@@ -26,7 +27,7 @@ const AboutMinistry = () => {
                 <h3 className="text-xl font-semibold ml-4 text-gray-900">Our Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                To provide holistic care, quality education, and protection for children in Uganda, 
+                To provide holistic care, quality education, and protection for children worldwide, 
                 empowering them to reach their full potential and become productive members of society.
               </p>
             </div>
@@ -39,7 +40,7 @@ const AboutMinistry = () => {
                 <h3 className="text-xl font-semibold ml-4 text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                A Uganda where every child has access to quality education, healthcare, protection, 
+                A world where every child has access to quality education, healthcare, protection, 
                 and opportunities to thrive in a nurturing and supportive environment.
               </p>
             </div>
@@ -79,19 +80,6 @@ const AboutMinistry = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="glass-orange liquid-morph liquid-depth glass-ripple relative rounded-2xl p-8 text-center backdrop-blur-12 border border-orange-300/30 shadow-lg hover:shadow-xl transition-all duration-300">
-          <h3 className="text-2xl font-bold mb-4 text-gray-900">Registration Details</h3>
-          <p className="text-gray-800 mb-2 font-semibold">
-            <strong className="text-gray-900">Company Registration Number:</strong> 80020002328043
-          </p>
-          <p className="text-gray-800 mb-2 font-semibold">
-            <strong className="text-gray-900">Registered Office:</strong> Kampala, Uganda
-          </p>
-          <p className="text-gray-800 font-semibold">
-            <strong className="text-gray-900">Type:</strong> Company Limited by Guarantee (Non-Profit)
-          </p>
         </div>
       </div>
     </section>
