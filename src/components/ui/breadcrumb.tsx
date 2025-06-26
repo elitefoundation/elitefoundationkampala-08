@@ -1,6 +1,8 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight, MoreHorizontal } from "lucide-react"
+import { Link } from "react-router-dom"
 
 import { cn } from "@/lib/utils"
 
@@ -9,7 +11,14 @@ const Breadcrumb = React.forwardRef<
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
->(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />)
+>(({ className, ...props }, ref) => (
+  <nav 
+    ref={ref} 
+    aria-label="breadcrumb" 
+    className={cn("mb-4", className)}
+    {...props} 
+  />
+))
 Breadcrumb.displayName = "Breadcrumb"
 
 const BreadcrumbList = React.forwardRef<
@@ -41,15 +50,16 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<"a"> & {
+  React.ComponentPropsWithoutRef<typeof Link> & {
     asChild?: boolean
   }
->(({ asChild, className, ...props }, ref) => {
-  const Comp = asChild ? Slot : "a"
+>(({ asChild, className, to, ...props }, ref) => {
+  const Comp = asChild ? Slot : Link
 
   return (
     <Comp
       ref={ref}
+      to={to}
       className={cn("transition-colors hover:text-foreground", className)}
       {...props}
     />

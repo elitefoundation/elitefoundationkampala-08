@@ -1,5 +1,5 @@
 
-import { ArrowRight, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, MapPin, Phone, Facebook, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -50,9 +50,10 @@ const Footer = () => {
       );
       
       toast({
-        title: "Success!",
-        description: "Thank you for subscribing to our newsletter.",
-        variant: "default"
+        title: "✅ Success!",
+        description: "Thank you for subscribing to our newsletter. You'll receive a confirmation email shortly.",
+        variant: "default",
+        duration: 5000
       });
       
       setEmail("");
@@ -103,6 +104,22 @@ const Footer = () => {
                   <span>+1 (555) 123-4567</span>
                 </button>
               </div>
+              
+              {/* Social Media Links */}
+              <div className="flex space-x-4 mt-6">
+                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Twitter">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+              </div>
             </div>
             
             <div>
@@ -143,14 +160,38 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Learn More</h3>
-              <ul className="space-y-3">
-                <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
-                <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
-                <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
-                <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
-                <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
-              </ul>
+              <h3 className="text-lg font-bold mb-4 text-white">Newsletter</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Stay updated with our latest news and impact stories.
+              </p>
+              <form onSubmit={handleSubscribe} className="space-y-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  disabled={isSubmitting}
+                />
+                <Button
+                  type="submit"
+                  disabled={isSubmitting || !email}
+                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-50"
+                >
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                </Button>
+              </form>
+              
+              <div className="mt-6">
+                <h4 className="text-sm font-semibold mb-3 text-white">Quick Links</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
+                  <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
+                  <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
+                  <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
+                  <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
+                </ul>
+              </div>
             </div>
           </div>
           

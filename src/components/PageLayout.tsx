@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import FloatingContactButton from './FloatingContactButton';
 import FloatingDonateButton from './FloatingDonateButton';
+import BackToTopButton from './BackToTopButton';
 
 interface PageLayoutProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
       <Footer />
       <FloatingContactButton />
       <FloatingDonateButton />
+      <BackToTopButton />
     </div>
   );
 };

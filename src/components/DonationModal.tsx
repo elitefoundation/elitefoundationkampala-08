@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Copy, ExternalLink, CreditCard, Building2, CheckCircle } from 'lucide-react';
+import { Copy, ExternalLink, CreditCard, Building2, CheckCircle, Loader2 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 interface DonationModalProps {
@@ -13,6 +12,7 @@ interface DonationModalProps {
 
 const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
   const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [isPayPalLoading, setIsPayPalLoading] = useState(false);
   const { toast } = useToast();
 
   const bankDetails = {
@@ -27,15 +27,16 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
       await navigator.clipboard.writeText(text);
       setCopiedField(field);
       toast({
-        title: "Copied!",
+        title: "✅ Copied!",
         description: `${field} copied to clipboard`,
-        variant: "default"
+        variant: "default",
+        duration: 3000
       });
       
-      // Reset the copied state after 2 seconds
+      // Reset the copied state after 3 seconds
       setTimeout(() => {
         setCopiedField(null);
-      }, 2000);
+      }, 3000);
     } catch (error) {
       toast({
         title: "Error",
@@ -46,11 +47,17 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
   };
 
   const handlePayPalDonation = () => {
+    setIsPayPalLoading(true);
     const url = amount 
       ? `https://www.paypal.me/Fiona202283/${amount.replace('$', '')}`
       : "https://www.paypal.me/Fiona202283";
-    window.open(url, '_blank', 'noopener,noreferrer');
-    onClose();
+    
+    // Simulate loading for better UX
+    setTimeout(() => {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      setIsPayPalLoading(false);
+      onClose();
+    }, 500);
   };
 
   return (
@@ -67,7 +74,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {/* PayPal Option */}
-          <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-all">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                 <CreditCard className="w-6 h-6 text-blue-600" />
@@ -82,15 +89,25 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
             </p>
             <Button 
               onClick={handlePayPalDonation}
+              disabled={isPayPalLoading}
               className="w-full bg-blue-600 hover:bg-blue-700"
             >
-              Donate with PayPal
-              <ExternalLink className="ml-2 h-4 w-4" />
+              {isPayPalLoading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Opening PayPal...
+                </>
+              ) : (
+                <>
+                  Donate with PayPal
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </>
+              )}
             </Button>
           </div>
 
           {/* Bank Transfer Option */}
-          <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+          <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-green-300 transition-all">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                 <Building2 className="w-6 h-6 text-green-600" />
@@ -104,7 +121,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
               Direct bank transfer for larger donations. Processing takes 1-3 business days.
             </p>
             <div className="space-y-3">
-              <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="bg-gray-50 p-3 rounded-lg border">
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="text-xs text-gray-500 uppercase tracking-wide">Account Number</p>
@@ -114,7 +131,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
                     size="sm"
                     variant="ghost"
                     onClick={() => copyToClipboard(bankDetails.accountNumber, "Account Number")}
-                    className="h-8 w-8 p-0"
+                    className="h-8 w-8 p-0 hover:bg-green-100"
                   >
                     {copiedField === "Account Number" ? (
                       <CheckCircle className="h-4 w-4 text-green-600" />
@@ -125,7 +142,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="bg-gray-50 p-3 rounded-lg border">
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="text-xs text-gray-500 uppercase tracking-wide">SWIFT Code</p>
@@ -135,7 +152,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
                     size="sm"
                     variant="ghost"
                     onClick={() => copyToClipboard(bankDetails.swiftCode, "SWIFT Code")}
-                    className="h-8 w-8 p-0"
+                    className="h-8 w-8 p-0 hover:bg-green-100"
                   >
                     {copiedField === "SWIFT Code" ? (
                       <CheckCircle className="h-4 w-4 text-green-600" />

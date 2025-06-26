@@ -1,15 +1,18 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
+import { Menu, X, ChevronDown, ExternalLink, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDonateLoading, setIsDonateLoading] = useState(false);
+  const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,15 @@ const Navbar = () => {
   };
 
   const handleDonateClick = () => {
-    window.open("https://www.paypal.me/EliteFoundation", '_blank', 'noopener,noreferrer');
+    setIsDonateLoading(true);
+    setTimeout(() => {
+      window.open("https://www.paypal.me/EliteFoundation", '_blank', 'noopener,noreferrer');
+      setIsDonateLoading(false);
+    }, 500);
+  };
+
+  const toggleMobileSection = (section: string) => {
+    setExpandedMobileSection(expandedMobileSection === section ? null : section);
   };
 
   return (
@@ -93,6 +104,14 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
+                  <Link to="/resources">
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
+                      Resources
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn(isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
                     Get Involved
                   </NavigationMenuTrigger>
@@ -123,22 +142,6 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn(isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                    More
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 w-[400px]">
-                      <li>
-                        <Link to="/resources" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Resources</div>
-                          <p className="text-sm text-gray-500">Reports, policies, and documentation</p>
-                        </Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
                   <Link to="/contact">
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
                       Contact
@@ -151,6 +154,7 @@ const Navbar = () => {
             {/* Donate Button */}
             <Button 
               onClick={handleDonateClick}
+              disabled={isDonateLoading}
               variant="glass"
               className={cn(
                 "px-4 py-2 font-medium",
@@ -159,8 +163,17 @@ const Navbar = () => {
                   : "bg-white/10 border-white/20 text-white hover:bg-white/20 hover:shadow-white/10"
               )}
             >
-              Donate Now
-              <ExternalLink className="ml-2 h-4 w-4" />
+              {isDonateLoading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Opening...
+                </>
+              ) : (
+                <>
+                  Donate Now
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </>
+              )}
             </Button>
           </div>
           
@@ -180,21 +193,44 @@ const Navbar = () => {
             Home
           </Link>
           
-          <Link to="/about" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            About Us
+          {/* About Section - Collapsible */}
+          <Collapsible>
+            <CollapsibleTrigger className={cn("w-full flex items-center justify-between px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
+              About
+              <ChevronDown className="h-4 w-4" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pl-6 space-y-1">
+              <Link to="/about" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+                Our Story
+              </Link>
+              <Link to="/programs" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+                Programs
+              </Link>
+              <Link to="/impact" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+                Our Impact
+              </Link>
+            </CollapsibleContent>
+          </Collapsible>
+          
+          <Link to="/resources" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+            Resources
           </Link>
           
-          <Link to="/programs" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Programs
-          </Link>
-          
-          <Link to="/donate" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Donate
-          </Link>
-          
-          <Link to="/volunteer" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Volunteer
-          </Link>
+          {/* Get Involved Section - Collapsible */}
+          <Collapsible>
+            <CollapsibleTrigger className={cn("w-full flex items-center justify-between px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
+              Get Involved
+              <ChevronDown className="h-4 w-4" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pl-6 space-y-1">
+              <Link to="/donate" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+                Donate
+              </Link>
+              <Link to="/volunteer" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
+                Volunteer
+              </Link>
+            </CollapsibleContent>
+          </Collapsible>
           
           <Link to="/testimonials" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
             Success Stories
@@ -206,10 +242,20 @@ const Navbar = () => {
           
           <button 
             onClick={handleDonateClick}
+            disabled={isDonateLoading}
             className={cn("w-full text-left px-3 py-2 rounded-md bg-orange-500 text-white hover:bg-orange-600 flex items-center justify-center mt-4")}
           >
-            Donate Now
-            <ExternalLink className="ml-2 h-4 w-4" />
+            {isDonateLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Opening...
+              </>
+            ) : (
+              <>
+                Donate Now
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </>
+            )}
           </button>
         </div>
       </div>

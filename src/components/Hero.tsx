@@ -1,10 +1,14 @@
 
-import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink } from "lucide-react";
+import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink, Loader2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Hero = () => {
   const isMobile = useIsMobile();
+  const [isDonateLoading, setIsDonateLoading] = useState(false);
+  const [isContactLoading, setIsContactLoading] = useState(false);
+  
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -34,12 +38,14 @@ const Hero = () => {
   
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
+    setIsContactLoading(true);
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({
         behavior: 'smooth'
       });
     }
+    setTimeout(() => setIsContactLoading(false), 800);
   };
 
   const scrollToPrograms = (e: React.MouseEvent) => {
@@ -54,7 +60,11 @@ const Hero = () => {
 
   const handleDonateClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+    setIsDonateLoading(true);
+    setTimeout(() => {
+      window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
+      setIsDonateLoading(false);
+    }, 500);
   };
   
   return <motion.div className="relative mt-16 md:mt-0 w-full" initial="hidden" animate="visible" variants={containerVariants}>
@@ -73,19 +83,63 @@ const Hero = () => {
               </motion.p>
               <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium"
+                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium disabled:opacity-50"
                   onClick={handleDonateClick}
+                  disabled={isDonateLoading}
                 >
-                  Donate Now
-                  <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+                  {isDonateLoading ? (
+                    <>
+                      <Loader2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                      Opening...
+                    </>
+                  ) : (
+                    <>
+                      Donate Now
+                      <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+                    </>
+                  )}
                 </button>
                 
                 <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium"
+                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium disabled:opacity-50"
                   onClick={scrollToContact}
+                  disabled={isContactLoading}
                 >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  {isContactLoading ? (
+                    <>
+                      <Loader2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                      Scrolling...
+                    </>
+                  ) : (
+                    <>
+                      Contact Us
+                      <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </button>
+              </motion.div>
+              
+              {/* Quick Actions */}
+              <motion.div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 justify-center items-center text-sm" variants={itemVariants}>
+                <button 
+                  onClick={scrollToPrograms}
+                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
+                >
+                  View Our Programs
+                </button>
+                <span className="hidden sm:inline text-gray-500">•</span>
+                <button 
+                  onClick={() => window.open('/impact', '_self')}
+                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
+                >
+                  See Our Impact
+                </button>
+                <span className="hidden sm:inline text-gray-500">•</span>
+                <button 
+                  onClick={() => window.open('/volunteer', '_self')}
+                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
+                >
+                  Join as Volunteer
                 </button>
               </motion.div>
             </motion.div>
