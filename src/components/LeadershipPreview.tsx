@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 const LeadershipPreview = () => {
   const leaders = [
     {
-      name: "Kaweesa Medard",
+      name: "Kimera Godffrey",
       role: "Founder & Executive Director",
       bio: "5+ years in child welfare and community development",
-      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
+      image: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png"
     },
     {
       name: "Kimera Godffrey",
