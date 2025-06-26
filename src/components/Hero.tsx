@@ -1,13 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white overflow-hidden">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="w-full h-full bg-repeat" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }}></div>
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -39,7 +42,7 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-3 gap-2 md:gap-6 mt-16">
             <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
               <Users className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
               <div className="text-3xl font-bold text-orange-400 mb-2">10,000+</div>
@@ -60,6 +63,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
