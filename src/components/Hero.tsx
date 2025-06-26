@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -45,20 +46,20 @@ const Hero = () => {
           <div className="grid grid-cols-3 gap-2 md:gap-6 mt-16">
             <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
               <Users className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">10,000+</div>
-              <div className="text-stone-300">Children Helped</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24+</div>
+              <div className="text-stone-300">Children Supported</div>
             </div>
             
             <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
               <BookOpen className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
-              <div className="text-stone-300">Programs Running</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">95%</div>
+              <div className="text-stone-300">School Enrollment</div>
             </div>
             
             <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
               <Heart className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">25</div>
-              <div className="text-stone-300">Countries Reached</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">1</div>
+              <div className="text-stone-300">Communities Served</div>
             </div>
           </div>
         </div>
@@ -68,3 +69,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
