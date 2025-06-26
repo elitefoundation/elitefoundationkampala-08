@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PhotoFilters from './PhotoFilters';
@@ -11,90 +12,74 @@ const PhotoGallery = () => {
   const images: GalleryImage[] = [
     {
       id: '1',
-      src: '/lovable-uploads/3a8f2e41-a6d3-400f-bb16-b3639668dac5.png',
-      alt: 'Children showing love for education',
-      title: 'Education Program',
-      description: 'Students showing their love for learning and education support programs',
-      category: 'education'
+      src: '/lovable-uploads/3fc60ca1-b5bf-43df-b895-319dfcc674e5.png',
+      alt: 'Volunteer working with children in community',
+      title: 'Community Volunteer Work',
+      description: 'A dedicated volunteer engaging with children and families in our community programs',
+      category: 'community'
     },
     {
       id: '2',
-      src: '/lovable-uploads/ae20c692-add7-44e3-8cf7-3dfb41d03120.png',
-      alt: 'Children receiving nutritional support',
-      title: 'Health & Nutrition',
-      description: 'Providing essential nutrition and healthcare support to children in need',
-      category: 'health'
+      src: '/lovable-uploads/3fdb7e3d-6a33-4ad6-8742-10e2a4cef15a.png',
+      alt: 'Children and youth outdoors by the lake',
+      title: 'Youth Outdoor Activities',
+      description: 'Happy children and teenagers enjoying outdoor activities and fellowship time',
+      category: 'community'
     },
     {
       id: '3',
-      src: '/lovable-uploads/81c61e84-d015-46ee-86f4-feb111e5bd7c.png',
-      alt: 'Community gathering and family empowerment activities',
-      title: 'Family Empowerment',
-      description: 'Supporting families through community engagement and development programs',
-      category: 'empowerment'
+      src: '/lovable-uploads/b04afcbd-f46d-441b-875a-be165448e7e9.png',
+      alt: 'Feeding program for children',
+      title: 'Nutrition Support Program',
+      description: 'Providing essential nutrition and meals to children in need through our feeding programs',
+      category: 'health'
     },
     {
       id: '4',
-      src: '/lovable-uploads/930dd311-3371-4175-a89c-65d6251b494c.png',
-      alt: 'Children in a safe and protected environment',
-      title: 'Child Protection',
-      description: 'Creating safe environments where children can learn and thrive',
-      category: 'protection'
+      src: '/lovable-uploads/8a2d1c8b-a854-4ab8-b397-6a1c40051b6b.png',
+      alt: 'Young people in community setting',
+      title: 'Youth Empowerment',
+      description: 'Empowering young people through mentorship and community engagement programs',
+      category: 'empowerment'
     },
     {
       id: '5',
-      src: '/lovable-uploads/17e70d34-166f-4068-8e12-09de2c2de513.png',
-      alt: 'Community gathering and events',
-      title: 'Community Events',
-      description: 'Bringing families and communities together for support and celebration',
+      src: '/lovable-uploads/e05b7927-319a-4276-ab7a-b48cfa9162cc.png',
+      alt: 'Group of happy children together',
+      title: 'Children\'s Fellowship',
+      description: 'Children coming together in joy and friendship through our community programs',
       category: 'community'
     },
     {
       id: '6',
-      src: '/lovable-uploads/fdfa6be8-c88f-443e-bf11-1bd8ec758fdc.png',
-      alt: 'Children engaged in hands-on learning activities',
-      title: 'Learning Activities',
-      description: 'Children actively participating in educational activities with learning materials and books',
-      category: 'education'
-    },
-    {
-      id: '7',
-      src: '/lovable-uploads/623f54bd-bf74-4003-a3bd-ebe64b1a6d8b.png',
-      alt: 'Children with message of blessings and hope',
-      title: 'Community Outreach',
-      description: 'Spreading messages of hope and blessings through community engagement',
+      src: '/lovable-uploads/b02940e2-afb9-4da8-aad6-e6a376dc6729.png',
+      alt: 'Community gathering with families and children',
+      title: 'Family Community Event',
+      description: 'Families and children gathering together for community events and celebrations',
       category: 'community'
     },
     {
+      id: '7',
+      src: '/lovable-uploads/ee1e142f-86dc-40d9-aaa9-8f18975f96c9.png',
+      alt: 'Older child caring for younger sibling',
+      title: 'Sibling Care & Protection',
+      description: 'Demonstrating love and care within families - older children protecting and nurturing younger siblings',
+      category: 'protection'
+    },
+    {
       id: '8',
-      src: '/lovable-uploads/4a68a2b4-58ea-4e10-94fd-38c016081bd2.png',
-      alt: 'Children participating in programs',
-      title: 'Program Participation',
-      description: 'Active participation of children in our development programs',
-      category: 'education'
+      src: '/lovable-uploads/35b75871-9ef1-4347-98c5-4b12aa9087d3.png',
+      alt: 'Children in evening community gathering',
+      title: 'Evening Community Programs',
+      description: 'Children participating in evening community programs and activities',
+      category: 'community'
     },
     {
       id: '9',
-      src: 'https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0168.jpg?raw=true',
-      alt: 'Health and wellness activities',
-      title: 'Health & Wellness',
-      description: 'Promoting health and wellness through various community programs',
-      category: 'health'
-    },
-    {
-      id: '10',
-      src: '/lovable-uploads/27090a33-68ee-40ec-9160-5d11f87e4799.png',
-      alt: 'Children engaged in hands-on learning activities',
-      title: 'Interactive Learning Sessions',
-      description: 'Children actively participating in educational activities with learning materials and books',
-      category: 'education'
-    },
-    {
-      id: '11',
-      src: '/lovable-uploads/17e70d34-166f-4068-8e12-09de2c2de513.png',
-      alt: 'Children in prayer and community gathering',
-      title: 'Prayer & Community Unity',
-      description: 'Children coming together in prayer and showing gratitude in our community programs',
+      src: '/lovable-uploads/eb2cae01-250d-435a-9d1f-a47aa014e4ac.png',
+      alt: 'Children with hands raised in prayer or celebration',
+      title: 'Children in Prayer & Worship',
+      description: 'Children participating in prayer and worship activities, showing gratitude and hope',
       category: 'community'
     }
   ];
@@ -104,11 +89,11 @@ const PhotoGallery = () => {
 
   const categories = [
     { key: 'all', label: 'All Photos' },
-    { key: 'education', label: 'Education' },
+    { key: 'community', label: 'Community' },
     { key: 'health', label: 'Health' },
     { key: 'empowerment', label: 'Empowerment' },
     { key: 'protection', label: 'Protection' },
-    { key: 'community', label: 'Community' }
+    { key: 'education', label: 'Education' }
   ];
 
   const filteredImages = filter === 'all' 
