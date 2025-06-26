@@ -13,7 +13,7 @@ const LeadershipPreview = () => {
       image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
     },
     {
-      name: "Rachael Namuwenge",
+      name: "Kimera Godffrey",
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
       image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
