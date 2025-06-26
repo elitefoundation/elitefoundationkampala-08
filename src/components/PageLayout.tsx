@@ -12,7 +12,7 @@ interface PageLayoutProps {
 
 const PageLayout = ({ children }: PageLayoutProps) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-wrlds-light via-stone-50 to-stone-100">
       <Navbar />
       <main className="flex-1">
         {children}

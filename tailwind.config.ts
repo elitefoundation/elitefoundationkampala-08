@@ -63,12 +63,63 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Enhanced color palette
 				wrlds: {
 					teal: '#9F9EA1',
-					dark: '#3F3F3F',
-					light: '#F6F6F7',
+					'teal-light': '#B5B4B7',
+					'teal-dark': '#89888B',
+					dark: '#1a1a2e', // Warmer than pure black
+					'dark-light': '#2d2d44',
+					light: '#fafaf9', // Warmer white
 					accent: '#C8C8C9',
 					muted: '#F1F1F1'
+				},
+				// Enhanced orange palette
+				orange: {
+					50: '#fff7ed',
+					100: '#fed7aa', // Light orange for hover states
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c', // Current medium orange
+					500: '#f97316', // Main orange
+					600: '#ea580c', // Deep orange for active states
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
+				},
+				// Warmer gray palette
+				stone: {
+					50: '#fafaf9',
+					100: '#f5f5f4',
+					200: '#e7e5e4',
+					300: '#d6d3d1',
+					400: '#a8a29e',
+					500: '#78716c', // Warmer medium gray
+					600: '#57534e',
+					700: '#44403c', // Warmer dark gray
+					800: '#292524',
+					900: '#1c1917',
+				},
+				// Status colors
+				success: {
+					50: '#ecfdf5',
+					500: '#10b981',
+					600: '#059669',
+				},
+				warning: {
+					50: '#fffbeb',
+					500: '#f59e0b',
+					600: '#d97706',
+				},
+				error: {
+					50: '#fef2f2',
+					500: '#ef4444',
+					600: '#dc2626',
+				},
+				info: {
+					50: '#eff6ff',
+					500: '#3b82f6',
+					600: '#2563eb',
 				}
 			},
 			borderRadius: {
@@ -78,6 +129,10 @@ export default {
 			},
 			fontFamily: {
 				'space': ['Space Grotesk', 'sans-serif'],
+			},
+			boxShadow: {
+				'orange-glow': '0 0 20px rgba(251, 146, 60, 0.3)',
+				'orange-glow-lg': '0 0 30px rgba(251, 146, 60, 0.4)',
 			},
 			keyframes: {
 				'accordion-down': {
