@@ -6,16 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 const QuickImpactStats = () => {
   const stats = [
     {
-      number: "90+",
+      number: "24+",
       label: "Children Supported",
       icon: <Users className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600"
-    },
-    {
-      number: "4",
-      label: "Communities Served",
-      icon: <MapPin className="w-6 h-6" />,
-      color: "bg-green-100 text-green-600"
     },
     {
       number: "95%",
@@ -24,7 +18,13 @@ const QuickImpactStats = () => {
       color: "bg-orange-100 text-orange-600"
     },
     {
-      number: "45+",
+      number: "1",
+      label: "Communities Served",
+      icon: <MapPin className="w-6 h-6" />,
+      color: "bg-green-100 text-green-600"
+    },
+    {
+      number: "5+",
       label: "Families Empowered",
       icon: <Home className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600"

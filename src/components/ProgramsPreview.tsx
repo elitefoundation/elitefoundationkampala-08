@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { BookOpen, Heart, Shield, Users, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,7 +12,7 @@ const ProgramsPreview = () => {
       description: "School fees, supplies, and scholarships for quality education",
       icon: <BookOpen className="w-6 h-6" />,
       color: "bg-blue-100 text-blue-600",
-      served: "30+ children",
+      served: "12+ children",
       image: "/lovable-uploads/27147af8-7d65-44dd-a212-5ab5d61073c9.png",
       activities: ["Scholarships", "School Supplies", "Tutoring Programs"]
     },
@@ -20,7 +21,7 @@ const ProgramsPreview = () => {
       description: "Healthcare, meals, and health education programs",
       icon: <Heart className="w-6 h-6" />,
       color: "bg-red-100 text-red-600",
-      served: "45+ children",
+      served: "18+ children",
       image: "/lovable-uploads/5f2a0b08-6176-4c6a-9b43-f1897db8d0cf.png",
       activities: ["Health Screenings", "Nutrition Programs", "Health Education"]
     },
@@ -29,7 +30,7 @@ const ProgramsPreview = () => {
       description: "Safe environments and protection from harm",
       icon: <Shield className="w-6 h-6" />,
       color: "bg-green-100 text-green-600",
-      served: "15+ children",
+      served: "8+ children",
       image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0066.jpg?raw=true",
       activities: ["Safe Spaces", "Counseling", "Legal Support"]
     },
@@ -38,7 +39,7 @@ const ProgramsPreview = () => {
       description: "Skills training and microfinance for families",
       icon: <Users className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600",
-      served: "25+ families",
+      served: "5+ families",
       image: "/lovable-uploads/1aef3f11-afc1-4188-84e6-1b175af029f8.png",
       activities: ["Skills Training", "Microfinance", "Business Support"]
     }
