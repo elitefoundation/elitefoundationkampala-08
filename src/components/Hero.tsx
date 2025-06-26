@@ -1,182 +1,75 @@
 
-import { ArrowRight, Heart, Users, BookOpen, Shield, ExternalLink, Loader2 } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const isMobile = useIsMobile();
-  const [isDonateLoading, setIsDonateLoading] = useState(false);
-  const [isContactLoading, setIsContactLoading] = useState(false);
-  
-  const containerVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
-        duration: 0.8
-      }
-    }
-  };
-  const itemVariants = {
-    hidden: {
-      y: 20,
-      opacity: 0
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-  
-  const scrollToContact = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsContactLoading(true);
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-    setTimeout(() => setIsContactLoading(false), 800);
-  };
-
-  const scrollToPrograms = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const programsSection = document.getElementById('programs');
-    if (programsSection) {
-      programsSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const handleDonateClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setIsDonateLoading(true);
-    setTimeout(() => {
-      window.open("https://www.paypal.me/Fiona202283", '_blank', 'noopener,noreferrer');
-      setIsDonateLoading(false);
-    }, 500);
-  };
-  
-  return <motion.div className="relative mt-16 md:mt-0 w-full" initial="hidden" animate="visible" variants={containerVariants}>
-      <div className="banner-container bg-black relative overflow-hidden h-[60vh] sm:h-[70vh] md:h-[750px] w-full">
-        <div className="absolute inset-0 bg-black w-full">
-          <img src="/lovable-uploads/efdceba7-7d2e-426d-88cd-09620d67eea7.png" alt="Young caregiver and child smiling together - representing our ministry's mission" className={`w-full h-full object-cover opacity-70 ${isMobile ? 'object-right' : 'object-center'}`} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/60"></div>
-        </div>
-        
-        <div className="banner-overlay bg-transparent pt-16 sm:pt-20 md:pt-24 w-full">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center h-full">
-            <motion.div className="w-full max-w-4xl text-center" variants={itemVariants}>
-              <motion.h1 className="banner-title text-white" variants={itemVariants}>Transforming Lives Through Love and Care</motion.h1>
-              <motion.p className="banner-subtitle text-gray-300 mt-4 sm:mt-6" variants={itemVariants}>
-                Elite Foundation is dedicated to nurturing, protecting, and empowering children worldwide through comprehensive programs that address their educational, health, and developmental needs.
-              </motion.p>
-              <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center" variants={itemVariants}>
-                <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium disabled:opacity-50"
-                  onClick={handleDonateClick}
-                  disabled={isDonateLoading}
-                >
-                  {isDonateLoading ? (
-                    <>
-                      <Loader2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
-                      Opening...
-                    </>
-                  ) : (
-                    <>
-                      Donate Now
-                      <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
-                    </>
-                  )}
-                </button>
-                
-                <button 
-                  className="w-full sm:w-auto min-h-[44px] px-6 sm:px-8 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg hover:bg-white/20 hover:shadow-xl hover:shadow-white/10 transition-all duration-300 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 rounded-md flex items-center justify-center group text-sm sm:text-base font-medium disabled:opacity-50"
-                  onClick={scrollToContact}
-                  disabled={isContactLoading}
-                >
-                  {isContactLoading ? (
-                    <>
-                      <Loader2 className="mr-2 w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
-                      Scrolling...
-                    </>
-                  ) : (
-                    <>
-                      Contact Us
-                      <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                    </>
-                  )}
-                </button>
-              </motion.div>
-              
-              {/* Quick Actions */}
-              <motion.div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-4 justify-center items-center text-sm" variants={itemVariants}>
-                <button 
-                  onClick={scrollToPrograms}
-                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
-                >
-                  View Our Programs
-                </button>
-                <span className="hidden sm:inline text-gray-500">•</span>
-                <button 
-                  onClick={() => window.open('/impact', '_self')}
-                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
-                >
-                  See Our Impact
-                </button>
-                <span className="hidden sm:inline text-gray-500">•</span>
-                <button 
-                  onClick={() => window.open('/volunteer', '_self')}
-                  className="text-gray-300 hover:text-white transition-colors underline decoration-dotted underline-offset-4 hover:decoration-solid"
-                >
-                  Join as Volunteer
-                </button>
-              </motion.div>
-            </motion.div>
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-4xl mx-auto animate-fade-in">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-stone-100 to-orange-200 bg-clip-text text-transparent">
+            Transforming Lives Through
+            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+              Excellence & Care
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-stone-200 max-w-3xl mx-auto leading-relaxed">
+            Elite Foundation is dedicated to improving the lives of children through 
+            education, health, protection, and community development programs that create lasting impact.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-glow text-white px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/donate">
+                Make a Difference <Heart className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            
+            <Button 
+              asChild 
+              variant="glass" 
+              size="lg"
+              className="bg-stone-100/10 backdrop-blur-md border border-stone-300/30 text-white hover:bg-stone-100/20 px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/about">
+                Learn More <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
+              <Users className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
+              <div className="text-3xl font-bold text-orange-400 mb-2">10,000+</div>
+              <div className="text-stone-300">Children Helped</div>
+            </div>
+            
+            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
+              <BookOpen className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
+              <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
+              <div className="text-stone-300">Programs Running</div>
+            </div>
+            
+            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
+              <Heart className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
+              <div className="text-3xl font-bold text-orange-400 mb-2">25</div>
+              <div className="text-stone-300">Countries Reached</div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
-        <motion.div className="mt-6 md:mt-8 grid grid-cols-3 gap-2 md:gap-4" variants={containerVariants} initial="hidden" animate="visible" transition={{
-        delay: 0.6
-      }}>
-          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-8 h-8 md:w-12 md:h-12 bg-orange-100 flex items-center justify-center rounded-lg text-orange-600 mb-2 md:mb-3">
-              <BookOpen className="w-4 h-4 md:w-6 md:h-6" />
-            </div>
-            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Education</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Providing quality education and learning opportunities to help children build brighter futures.</p>
-          </motion.div>
-          
-          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-8 h-8 md:w-12 md:h-12 bg-blue-100 flex items-center justify-center rounded-lg text-blue-600 mb-2 md:mb-3">
-              <Shield className="w-4 h-4 md:w-6 md:h-6" />
-            </div>
-            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Protection</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Ensuring children's safety, rights, and wellbeing through comprehensive protection programs.</p>
-          </motion.div>
-          
-          <motion.div className="bg-white p-3 md:p-5 rounded-xl shadow-sm border border-gray-100 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md" variants={itemVariants}>
-            <div className="w-8 h-8 md:w-12 md:h-12 bg-green-100 flex items-center justify-center rounded-lg text-green-600 mb-2 md:mb-3">
-              <Users className="w-4 h-4 md:w-6 md:h-6" />
-            </div>
-            <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2 text-gray-800">Community</h3>
-            <p className="text-gray-600 text-xs md:text-sm">Building stronger communities that support and nurture children's growth and development.</p>
-          </motion.div>
-        </motion.div>
-      </div>
-    </motion.div>;
+    </section>
+  );
 };
 
 export default Hero;

@@ -1,262 +1,168 @@
 
-import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown, ExternalLink, Loader2 } from "lucide-react";
-import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, X, Heart, Users, BookOpen, Target, Phone, Gift } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDonateLoading, setIsDonateLoading] = useState(false);
-  const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleDonateClick = () => {
-    setIsDonateLoading(true);
-    setTimeout(() => {
-      window.open("https://www.paypal.me/EliteFoundation", '_blank', 'noopener,noreferrer');
-      setIsDonateLoading(false);
-    }, 500);
-  };
-
-  const toggleMobileSection = (section: string) => {
-    setExpandedMobileSection(expandedMobileSection === section ? null : section);
-  };
+  const navItems = [
+    { href: "/about", label: "About", icon: Users },
+    { href: "/programs", label: "Programs", icon: BookOpen },
+    { href: "/impact", label: "Impact", icon: Target },
+    { href: "/volunteer", label: "Volunteer", icon: Heart },
+    { href: "/contact", label: "Contact", icon: Phone },
+  ];
 
   return (
-    <motion.nav 
-      className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full", 
-        isScrolled ? "bg-white shadow-sm" : "bg-black"
-      )} 
-      initial={{ opacity: 1, y: 0 }} 
-      animate={{ opacity: 1, y: 0 }}
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-stone-50/95 backdrop-blur-md shadow-lg border-b border-stone-200/50"
+          : "bg-transparent"
+      }`}
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8 mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <span className={cn(
-                "text-lg sm:text-xl font-bold transition-colors duration-300",
-                isScrolled ? "text-gray-900" : "text-white"
-              )}>
-                ELITE FOUNDATION
-              </span>
-            </Link>
-          </div>
-          
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-orange-glow transition-all duration-300">
+              <Heart className="h-6 w-6 text-white" />
+            </div>
+            <span className={`text-xl font-bold transition-colors duration-300 ${
+              isScrolled ? "text-stone-800" : "text-white"
+            }`}>
+              Elite Foundation
+            </span>
+          </Link>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
-            <NavigationMenu className={cn(isScrolled ? "" : "text-white")}>
+          <div className="hidden md:flex items-center space-x-8">
+            <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <Link to="/">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                      Home
+                {navItems.map((item) => (
+                  <NavigationMenuItem key={item.href}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to={item.href}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                          location.pathname === item.href
+                            ? isScrolled
+                              ? "text-orange-600 bg-orange-50"
+                              : "text-orange-400 bg-white/10"
+                            : isScrolled
+                            ? "text-stone-700 hover:text-orange-600 hover:bg-stone-100"
+                            : "text-stone-200 hover:text-white hover:bg-white/10"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
                     </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn(isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                    About
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 w-[400px]">
-                      <li>
-                        <Link to="/about" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Our Story</div>
-                          <p className="text-sm text-gray-500">Learn about our mission and history</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/programs" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Programs</div>
-                          <p className="text-sm text-gray-500">Education, health, and protection services</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/impact" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Our Impact</div>
-                          <p className="text-sm text-gray-500">See the difference we're making</p>
-                        </Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link to="/resources">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                      Resources
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn(isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                    Get Involved
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-4 w-[400px]">
-                      <li>
-                        <Link to="/donate" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Donate</div>
-                          <p className="text-sm text-gray-500">Support our programs and make a difference</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/volunteer" className="block p-3 space-y-1 rounded-md hover:bg-gray-100">
-                          <div className="font-medium">Volunteer</div>
-                          <p className="text-sm text-gray-500">Join our team of dedicated volunteers</p>
-                        </Link>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link to="/testimonials">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                      Success Stories
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <Link to="/contact">
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), isScrolled ? "text-gray-700 hover:text-gray-900" : "text-gray-100 hover:text-white bg-transparent hover:bg-gray-800")}>
-                      Contact
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
-            
-            {/* Donate Button */}
-            <Button 
-              onClick={handleDonateClick}
-              disabled={isDonateLoading}
-              variant="glass"
-              className={cn(
-                "px-4 py-2 font-medium",
-                isScrolled 
-                  ? "bg-orange-500/20 border-orange-500/30 text-orange-600 hover:bg-orange-500/30 hover:shadow-orange-500/20" 
-                  : "bg-white/10 border-white/20 text-white hover:bg-white/20 hover:shadow-white/10"
-              )}
+
+            <Button
+              asChild
+              variant={isScrolled ? "default" : "glass"}
+              className={`${
+                isScrolled
+                  ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+                  : "bg-white/10 hover:bg-white/20 text-white border-white/30"
+              } hover:shadow-lg transition-all duration-300 hover:scale-105`}
             >
-              {isDonateLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Opening...
-                </>
-              ) : (
-                <>
-                  Donate Now
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </>
-              )}
+              <Link to="/donate">
+                <Gift className="w-4 h-4 mr-2" />
+                Donate Now
+              </Link>
             </Button>
           </div>
-          
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className={cn("focus:outline-none", isScrolled ? "text-gray-700" : "text-white")}>
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
 
-      {/* Mobile Navigation Menu */}
-      <div className={cn("md:hidden transition-all duration-300 overflow-hidden w-full", isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0")}>
-        <div className={cn("px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-sm", isScrolled ? "bg-white" : "bg-black")}>
-          <Link to="/" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Home
-          </Link>
-          
-          {/* About Section - Collapsible */}
-          <Collapsible>
-            <CollapsibleTrigger className={cn("w-full flex items-center justify-between px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
-              About
-              <ChevronDown className="h-4 w-4" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="pl-6 space-y-1">
-              <Link to="/about" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-                Our Story
-              </Link>
-              <Link to="/programs" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-                Programs
-              </Link>
-              <Link to="/impact" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-                Our Impact
-              </Link>
-            </CollapsibleContent>
-          </Collapsible>
-          
-          <Link to="/resources" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Resources
-          </Link>
-          
-          {/* Get Involved Section - Collapsible */}
-          <Collapsible>
-            <CollapsibleTrigger className={cn("w-full flex items-center justify-between px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")}>
-              Get Involved
-              <ChevronDown className="h-4 w-4" />
-            </CollapsibleTrigger>
-            <CollapsibleContent className="pl-6 space-y-1">
-              <Link to="/donate" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-                Donate
-              </Link>
-              <Link to="/volunteer" className={cn("block px-3 py-2 rounded-md text-sm", isScrolled ? "text-gray-600 hover:bg-gray-50" : "text-gray-300 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-                Volunteer
-              </Link>
-            </CollapsibleContent>
-          </Collapsible>
-          
-          <Link to="/testimonials" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Success Stories
-          </Link>
-          
-          <Link to="/contact" className={cn("block px-3 py-2 rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-gray-900")} onClick={() => setIsMenuOpen(false)}>
-            Contact
-          </Link>
-          
-          <button 
-            onClick={handleDonateClick}
-            disabled={isDonateLoading}
-            className={cn("w-full text-left px-3 py-2 rounded-md bg-orange-500 text-white hover:bg-orange-600 flex items-center justify-center mt-4")}
-          >
-            {isDonateLoading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Opening...
-              </>
-            ) : (
-              <>
-                Donate Now
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </>
-            )}
-          </button>
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className={`${
+                    isScrolled ? "text-stone-800 hover:bg-stone-100" : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-stone-50 border-stone-200">
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                      <Heart className="h-5 w-5 text-white" />
+                    </div>
+                    <span className="text-lg font-bold text-stone-800">Elite Foundation</span>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {navItems.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
+                          location.pathname === item.href
+                            ? "bg-orange-50 text-orange-600 border-l-4 border-orange-500"
+                            : "text-stone-700 hover:bg-stone-100 hover:text-orange-600"
+                        }`}
+                      >
+                        <Icon className="h-5 w-5" />
+                        <span className="font-medium">{item.label}</span>
+                      </Link>
+                    );
+                  })}
+
+                  <div className="pt-4 border-t border-stone-200">
+                    <Button
+                      asChild
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Link to="/donate">
+                        <Gift className="w-4 h-4 mr-2" />
+                        Donate Now
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </motion.nav>
