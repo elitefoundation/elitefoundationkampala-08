@@ -13,10 +13,10 @@ const LeadershipPreview = () => {
       image: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png"
     },
     {
-      name: "Kimera Godffrey",
+      name: "Miss Cindy W",
       role: "Program Director",
       bio: "Education specialist with focus on rural development",
-      image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
+      image: "/lovable-uploads/19cc4c5b-35b2-4f5e-b0f4-f5370644ce8f.png"
     }
   ];
 
