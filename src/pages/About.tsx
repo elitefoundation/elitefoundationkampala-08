@@ -12,16 +12,16 @@ const About = () => {
 
   const leaders = [
     {
-      name: "Dr. Sarah Mitchell",
+      name: "Kimera Godffrey",
       role: "Founder & Executive Director",
-      bio: "10+ years in international development and child welfare",
-      image: "/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png"
+      bio: "5+ years in child welfare and community development",
+      image: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png"
     },
     {
-      name: "Michael Thompson",
+      name: "Miss Cindy W",
       role: "Program Director",
-      bio: "Education specialist with focus on global development",
-      image: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png"
+      bio: "since day one donor",
+      image: "/lovable-uploads/19cc4c5b-35b2-4f5e-b0f4-f5370644ce8f.png"
     }
   ];
   
@@ -123,7 +123,7 @@ const About = () => {
 
                 <h3 className="text-2xl font-bold mb-6">Meet Our Leadership</h3>
                 <p className="text-gray-600 mb-8 text-center">
-                  Visionary leaders committed to excellence in child welfare through experienced leadership and innovative approaches
+                  Dedicated professionals committed to transforming children's lives through experienced leadership and passionate service
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
