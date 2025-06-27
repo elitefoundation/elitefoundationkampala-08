@@ -135,16 +135,18 @@ const About = () => {
                       transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                     >
                       <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                          <img 
-                            src={leader.image} 
-                            alt={leader.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <h4 className="text-xl font-bold mb-2">{leader.name}</h4>
-                        <p className="text-orange-600 font-medium mb-2">{leader.role}</p>
-                        <p className="text-gray-600">{leader.bio}</p>
+                        <CardContent className="p-6">
+                          <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
+                            <img 
+                              src={leader.image} 
+                              alt={leader.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h4 className="text-xl font-bold mb-2">{leader.name}</h4>
+                          <p className="text-orange-600 font-medium mb-2">{leader.role}</p>
+                          <p className="text-gray-600">{leader.bio}</p>
+                        </CardContent>
                       </Card>
                     </motion.div>
                   ))}
