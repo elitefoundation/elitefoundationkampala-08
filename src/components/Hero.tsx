@@ -1,14 +1,90 @@
 
-
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const heroImages = [
+    {
+      url: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png",
+      alt: "Child proudly showing new shoes - education and supply support",
+      title: "Empowering Through Education"
+    },
+    {
+      url: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png", 
+      alt: "Joyful child with big smile - happiness through care",
+      title: "Bringing Joy & Hope"
+    },
+    {
+      url: "/lovable-uploads/1aef3f11-afc1-4188-84e6-1b175af029f8.png",
+      alt: "Caring embrace between children - protection and community",
+      title: "Building Strong Communities"
+    }
+  ];
+
+  // Preload images
+  useEffect(() => {
+    const preloadImages = async () => {
+      const imagePromises = heroImages.map((image) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = resolve;
+          img.src = image.url;
+        });
+      });
+      
+      await Promise.all(imagePromises);
+      setIsLoaded(true);
+    };
+
+    preloadImages();
+  }, []);
+
+  // Auto-rotate images
+  useEffect(() => {
+    if (!isLoaded || isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isLoaded, isPaused, heroImages.length]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-20">
+    <section 
+      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Background Images with Transitions */}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image.url}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+            />
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-stone-800/60 to-stone-900/70"></div>
+          </div>
+        ))}
+      </div>
+
+      {/* Background pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full bg-repeat" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
@@ -42,6 +118,22 @@ const Hero = () => {
             </Button>
           </div>
           
+          {/* Image Navigation Indicators */}
+          <div className="flex justify-center space-x-2 mb-8">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex 
+                    ? 'bg-orange-400 shadow-lg shadow-orange-400/50' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+                aria-label={`View image ${index + 1}: ${heroImages[index].title}`}
+              />
+            ))}
+          </div>
+          
           {/* Stats */}
           <div className="grid grid-cols-3 gap-2 md:gap-6 mt-16">
             <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
@@ -62,6 +154,13 @@ const Hero = () => {
               <div className="text-stone-300">Communities Served</div>
             </div>
           </div>
+
+          {/* Current Image Title */}
+          <div className="mt-8 opacity-70">
+            <p className="text-sm md:text-base text-stone-300">
+              {heroImages[currentImageIndex].title}
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -69,4 +168,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
