@@ -93,24 +93,9 @@ const Testimonials = () => {
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Children's Success Stories</h2>
           
-          {/* Add QuickImpactStats component here */}
           <QuickImpactStats />
           
-          {/* Impact Stories Section */}
           <div className="mt-16">
-            <div className="text-center mb-12">
-              <div className="inline-block mb-3 px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                Impact Stories
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Transforming Lives, One Child at a Time
-              </h3>
-              <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-                Read the inspiring stories of children, families, and supporters whose lives have been transformed through our programs. 
-                These stories represent the hundreds of children we've been privileged to serve.
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {beneficiaryStories.map((story, index) => (
                 <Card key={index} className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">

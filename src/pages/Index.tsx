@@ -6,7 +6,6 @@ import QuickImpactStats from '@/components/QuickImpactStats';
 import AboutMinistry from '@/components/AboutMinistry';
 import LeadershipPreview from '@/components/LeadershipPreview';
 import ProgramsPreview from '@/components/ProgramsPreview';
-import ImpactStories from '@/components/ImpactStories';
 import ValuesApproach from '@/components/ValuesApproach';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HowToHelp from '@/components/HowToHelp';
@@ -39,7 +38,6 @@ const Index = () => {
       <AboutMinistry />
       <LeadershipPreview />
       <ProgramsPreview />
-      <ImpactStories />
       <ValuesApproach />
       <TestimonialsCarousel />
       <HowToHelp />
