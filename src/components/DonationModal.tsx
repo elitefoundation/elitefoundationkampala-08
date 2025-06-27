@@ -48,9 +48,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
 
   const handlePayPalDonation = () => {
     setIsPayPalLoading(true);
-    const url = amount 
-      ? `https://www.paypal.me/Fiona202283/${amount.replace('$', '')}`
-      : "https://www.paypal.me/Fiona202283";
+    const url = "https://www.paypal.com/donate/?hosted_button_id=NT42R89QRVQ42";
     
     // Simulate loading for better UX
     setTimeout(() => {
