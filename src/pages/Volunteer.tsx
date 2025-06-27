@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Users, BookOpen, Heart, Globe, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -62,7 +61,7 @@ const Volunteer = () => {
   };
   
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/b862d5ae-6abb-44da-84f0-00a222f62906.png">
       <SEO 
         title="Volunteer - KAWEESA CHILDREN'S MINISTRY LIMITED" 
         description="Join our mission to transform children's lives in Uganda. Volunteer opportunities in education, healthcare, community outreach, and more."

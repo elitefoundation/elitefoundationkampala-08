@@ -1,4 +1,3 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -27,7 +26,7 @@ const About = () => {
   ];
   
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">

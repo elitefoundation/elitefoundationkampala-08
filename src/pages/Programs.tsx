@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -66,7 +65,7 @@ const Programs = () => {
   ];
 
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png">
       <SEO 
         title="Our Programs - KAWEESA CHILDREN'S MINISTRY LIMITED" 
         description="Discover our comprehensive programs supporting children in Uganda through education, health, protection, and family empowerment initiatives."

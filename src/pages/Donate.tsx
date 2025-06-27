@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Heart, Users, BookOpen, Utensils, Shield, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -50,7 +49,7 @@ const Donate = () => {
   };
   
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/27147af8-7d65-44dd-a212-5ab5d61073c9.png">
       <SEO 
         title="Donate - KAWEESA CHILDREN'S MINISTRY LIMITED" 
         description="Make a difference in a child's life. Your donation helps provide education, healthcare, nutrition, and protection for vulnerable children in Uganda."
