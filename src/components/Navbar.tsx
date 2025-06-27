@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -54,7 +53,7 @@ const Navbar = () => {
               <Heart className="h-6 w-6 text-white" />
             </div>
             <span className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? "text-stone-800" : "text-white"
+              isScrolled ? "text-stone-800" : "text-white drop-shadow-lg"
             }`}>
               Elite Foundation
             </span>
@@ -73,10 +72,10 @@ const Navbar = () => {
                           location.pathname === item.href
                             ? isScrolled
                               ? "text-orange-600 bg-orange-50"
-                              : "text-orange-400 bg-white/10"
+                              : "text-orange-300 bg-white/20 drop-shadow-md"
                             : isScrolled
                             ? "text-stone-700 hover:text-orange-600 hover:bg-stone-100"
-                            : "text-stone-200 hover:text-white hover:bg-white/10"
+                            : "text-white drop-shadow-md hover:text-orange-200 hover:bg-white/20"
                         }`}
                       >
                         {item.label}
@@ -93,7 +92,7 @@ const Navbar = () => {
               className={`${
                 isScrolled
                   ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
-                  : "bg-white/10 hover:bg-white/20 text-white border-white/30"
+                  : "bg-white/20 hover:bg-white/30 text-white border-white/40 drop-shadow-lg backdrop-blur-md"
               } hover:shadow-lg transition-all duration-300 hover:scale-105`}
             >
               <Link to="/donate">
@@ -111,7 +110,9 @@ const Navbar = () => {
                   variant="ghost"
                   size="icon"
                   className={`${
-                    isScrolled ? "text-stone-800 hover:bg-stone-100" : "text-white hover:bg-white/10"
+                    isScrolled 
+                      ? "text-stone-800 hover:bg-stone-100" 
+                      : "text-white hover:bg-white/20 drop-shadow-lg"
                   }`}
                 >
                   <Menu className="h-6 w-6" />
