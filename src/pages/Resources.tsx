@@ -17,7 +17,7 @@ const Resources = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Resources - KAWEESA CHILDREN'S MINISTRY LIMITED" 
+        title="Resources - ELITE FOUNDATION" 
         description="Access our annual reports, educational materials, financial statements, and policy documents. Transparency and accountability in all our operations."
         keywords={['annual reports', 'financial transparency', 'educational resources', 'child protection policies', 'charity accountability']}
       />

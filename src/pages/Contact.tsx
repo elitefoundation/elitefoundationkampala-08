@@ -18,8 +18,8 @@ const Contact = () => {
   return (
     <PageLayout backgroundImage="/lovable-uploads/11e92b89-ed02-453a-9888-56cd91807f2d.png">
       <SEO 
-        title="Contact Us - KAWEESA CHILDREN'S MINISTRY LIMITED" 
-        description="Get in touch with KAWEESA CHILDREN'S MINISTRY LIMITED. Contact us for volunteering, donations, partnerships, or general inquiries."
+        title="Contact Us - ELITE FOUNDATION" 
+        description="Get in touch with ELITE FOUNDATION. Contact us for volunteering, donations, partnerships, or general inquiries."
         keywords={['contact children ministry', 'Uganda charity contact', 'ministry contact information']}
       />
       

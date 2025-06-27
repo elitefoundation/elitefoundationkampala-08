@@ -15,8 +15,8 @@ const Careers = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Careers - KAWEESA CHILDREN'S MINISTRY LIMITED" 
-        description="Join our team and make a difference in children's lives. Explore career opportunities at KAWEESA CHILDREN'S MINISTRY LIMITED in Uganda."
+        title="Careers - ELITE FOUNDATION" 
+        description="Join our team and make a difference in children's lives. Explore career opportunities at ELITE FOUNDATION in Uganda."
         keywords={['ministry jobs Uganda', 'children ministry careers', 'NGO jobs Uganda', 'charity work opportunities']}
       />
       

@@ -12,21 +12,21 @@ const Testimonials = () => {
     {
       name: "Auntie Rose",
       age: 11,
-      story: "Devine lost her whole family and was abandoned even by relatives. I opened my home to her, but I couldn't provide what she truly needed. KAWEESA Children's Ministry filled in that gap — school fees, books, meals, and most importantly, love. She now smiles again.",
+      story: "Devine lost her whole family and was abandoned even by relatives. I opened my home to her, but I couldn't provide what she truly needed. ELITE FOUNDATION filled in that gap — school fees, books, meals, and most importantly, love. She now smiles again.",
       program: "Guardian of Devine",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     },
     {
       name: "James",
       age: 8,
-      story: "Tom was left all alone after his parents died. I found him wandering the streets and brought him home, though we have so little ourselves. KAWEESA Children's Ministry has been a lifeline. They've given Tom clothes, meals, and an education. I never thought someone would care for him like their own child.",
+      story: "Tom was left all alone after his parents died. I found him wandering the streets and brought him home, though we have so little ourselves. ELITE FOUNDATION has been a lifeline. They've given Tom clothes, meals, and an education. I never thought someone would care for him like their own child.",
       program: "Guardian of Tom",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     },
     {
       name: "Grace",
       age: 10,
-      story: "When my sister and her husband passed away from COVID-19, I took in little Racheal with no idea how I would care for her. The support from KAWEESA Children's Ministry gave her not just food and schooling, but also hope. She now dreams of becoming an artist. I thank God every day for the people who stand with children like Racheal.",
+      story: "When my sister and her husband passed away from COVID-19, I took in little Racheal with no idea how I would care for her. The support from ELITE FOUNDATION gave her not just food and schooling, but also hope. She now dreams of becoming an artist. I thank God every day for the people who stand with children like Racheal.",
       program: "Guardian of Racheal",
       image: "/lovable-uploads/4bfa0d71-3ed2-4693-90b6-35142468907f.png"
     }
@@ -56,7 +56,7 @@ const Testimonials = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Testimonials - KAWEESA CHILDREN'S MINISTRY LIMITED" 
+        title="Testimonials - ELITE FOUNDATION" 
         description="Read inspiring stories from children, families, sponsors, and volunteers whose lives have been transformed through our ministry programs."
         keywords={['success stories', 'testimonials', 'child sponsorship stories', 'volunteer experiences', 'transformation stories']}
       />

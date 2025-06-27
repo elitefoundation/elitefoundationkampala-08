@@ -49,7 +49,7 @@ const Volunteer = () => {
   ];
 
   const handleApplyForRole = (roleTitle: string) => {
-    redirectToWhatsApp("volunteer", `Hello, I would like to apply for the ${roleTitle} volunteer position at Kaweesa Children's Ministry. Can you please provide me with more information about the application process?`);
+    redirectToWhatsApp("volunteer", `Hello, I would like to apply for the ${roleTitle} volunteer position at Elite Foundation. Can you please provide me with more information about the application process?`);
   };
 
   const handleStartApplication = () => {
@@ -57,13 +57,13 @@ const Volunteer = () => {
   };
 
   const handleLearnAboutTraining = () => {
-    redirectToWhatsApp("volunteer", "Hello, I would like to learn more about the volunteer training program at Kaweesa Children's Ministry. Can you please provide me with details about the training process and requirements?");
+    redirectToWhatsApp("volunteer", "Hello, I would like to learn more about the volunteer training program at Elite Foundation. Can you please provide me with details about the training process and requirements?");
   };
   
   return (
     <PageLayout backgroundImage="/lovable-uploads/b862d5ae-6abb-44da-84f0-00a222f62906.png">
       <SEO 
-        title="Volunteer - KAWEESA CHILDREN'S MINISTRY LIMITED" 
+        title="Volunteer - ELITE FOUNDATION" 
         description="Join our mission to transform children's lives in Uganda. Volunteer opportunities in education, healthcare, community outreach, and more."
         keywords={['volunteer Uganda', 'children ministry volunteer', 'volunteer opportunities', 'help children Uganda']}
       />

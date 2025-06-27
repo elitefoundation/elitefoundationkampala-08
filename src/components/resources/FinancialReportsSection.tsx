@@ -7,7 +7,7 @@ import { redirectToWhatsApp } from '@/utils/whatsappHelper';
 
 const FinancialReportsSection = () => {
   const handleWhatsAppRequest = (documentName: string) => {
-    const customMessage = `Hello, I would like to request ${documentName} from KAWEESA CHILDREN'S MINISTRY LIMITED.`;
+    const customMessage = `Hello, I would like to request ${documentName} from ELITE FOUNDATION.`;
     redirectToWhatsApp("general", customMessage);
   };
 

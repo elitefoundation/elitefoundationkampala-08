@@ -51,7 +51,7 @@ const Donate = () => {
   return (
     <PageLayout backgroundImage="/lovable-uploads/27147af8-7d65-44dd-a212-5ab5d61073c9.png">
       <SEO 
-        title="Donate - KAWEESA CHILDREN'S MINISTRY LIMITED" 
+        title="Donate - ELITE FOUNDATION" 
         description="Make a difference in a child's life. Your donation helps provide education, healthcare, nutrition, and protection for vulnerable children in Uganda."
         keywords={['donate to children', 'Uganda charity donation', 'sponsor a child', 'children ministry donation']}
       />
