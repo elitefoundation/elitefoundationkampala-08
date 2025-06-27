@@ -8,37 +8,37 @@ const TestimonialsCarousel = () => {
     {
       name: "Racheal",
       role: "10 years old",
-      content: "My name is Racheal. I live with my auntie because my mummy and daddy died. Before, I didn't go to school and we didn't have enough food. Now, Kaweesa Children's Ministries Limited gives me food and pays my school fees. I love drawing and I want to be an artist. Thank you for helping me.",
+      content: "My name is Racheal. I live with my auntie because my mummy and daddy died. Before, I didn't go to school and we didn't have enough food. Now, Elite Foundation gives me food and pays my school fees. I love drawing and I want to be an artist. Thank you for helping me.",
       image: "/lovable-uploads/13b49069-af8e-4704-a066-67143479c138.png"
     },
     {
       name: "Tom",
       role: "8 years old",
-      content: "I am Tom. I was left alone when my family died. I used to cry a lot. Now I live with a good uncle, and Kaweesa Children's Ministries Limited helps us. I go to school, I eat every day, and I play football with friends. I want to be a teacher one day. Thank you for making me smile again.",
+      content: "I am Tom. I was left alone when my family died. I used to cry a lot. Now I live with a good uncle, and Elite Foundation helps us. I go to school, I eat every day, and I play football with friends. I want to be a teacher one day. Thank you for making me smile again.",
       image: "/lovable-uploads/955416bc-3ab9-473f-a1a5-c76467be4658.png"
     },
     {
       name: "Devine",
       role: "11 years old",
-      content: "My name is Devine. I lost my whole family and nobody wanted me. I felt very sad. Then a kind auntie took me in. I now go to school and have books and food because of Kaweesa Children's Ministries Limited. I want to become a nurse to help others like me.",
+      content: "My name is Devine. I lost my whole family and nobody wanted me. I felt very sad. Then a kind auntie took me in. I now go to school and have books and food because of Elite Foundation. I want to become a nurse to help others like me.",
       image: "/lovable-uploads/4894e9c9-e72a-41b8-97f1-21cb157aceb5.png"
     },
     {
       name: "Oliver",
       role: "9 years old",
-      content: "My name is Oliver. My mummy died and I had no one. My stepmother died too. I now live with a good lady who takes care of me. Kaweesa Children's Ministries Limited gives me school things and clothes. I like singing and I want to be a lawyer. Thank you for helping me learn.",
+      content: "My name is Oliver. My mummy died and I had no one. My stepmother died too. I now live with a good lady who takes care of me. Elite Foundation gives me school things and clothes. I like singing and I want to be a lawyer. Thank you for helping me learn.",
       image: "/lovable-uploads/f4d8e2af-2c4a-47a6-9a69-fffc94009473.png"
     },
     {
       name: "Aneni Joan",
       role: "10 years old",
-      content: "I'm Aneni Joan. I was very sick and had no help after my parents died. Now, I am happy because Kaweesa Children's Ministries Limited supports me. I eat, learn, and play with friends. I want to be a doctor. Thank you for loving children like me.",
+      content: "I'm Aneni Joan. I was very sick and had no help after my parents died. Now, I am happy because Elite Foundation supports me. I eat, learn, and play with friends. I want to be a doctor. Thank you for loving children like me.",
       image: "/lovable-uploads/9d319820-ff2f-46c4-a479-1cf89731bb0d.png"
     },
     {
       name: "Ronald",
       role: "10 years old",
-      content: "My name is Ronald. I didn't have food and school after my parents died. I felt lost. But now, I live with my grandma and Kaweesa Children's Ministries Limited helps us. I want to be a footballer and make her proud. Thank you for giving me hope.",
+      content: "My name is Ronald. I didn't have food and school after my parents died. I felt lost. But now, I live with my grandma and Elite Foundation helps us. I want to be a footballer and make her proud. Thank you for giving me hope.",
       image: "/lovable-uploads/b49b6853-e71b-4f03-91e9-52b27412d0ea.png"
     }
   ];
