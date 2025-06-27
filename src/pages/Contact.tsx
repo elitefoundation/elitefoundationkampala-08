@@ -17,7 +17,7 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+256 772 477 774"],
+      details: ["+256 762 080 041"],
       color: "bg-blue-100 text-blue-600",
       onClick: () => redirectToWhatsApp("general")
     },
@@ -151,7 +151,7 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-green-600 mr-3" />
                       <div className="text-left">
                         <h4 className="font-semibold text-green-900">Emergency Contact</h4>
-                        <p className="text-green-700 text-sm">+256 772 477 774</p>
+                        <p className="text-green-700 text-sm">+256 762 080 041</p>
                       </div>
                     </button>
                     <button 

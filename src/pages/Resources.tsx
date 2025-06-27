@@ -1,15 +1,16 @@
+
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, MessageCircle, BookOpen, BarChart3, Shield, Users } from 'lucide-react';
 import { motion } from "framer-motion";
 import SEO from '@/components/SEO';
+import { redirectToWhatsApp } from '@/utils/whatsappHelper';
 
 const Resources = () => {
   const handleWhatsAppRequest = (documentName: string) => {
-    const message = `Hello, I would like to request ${documentName} from Kaweesa Children's Ministry.`;
-    const whatsappUrl = `https://wa.me/+256772477774?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const customMessage = `Hello, I would like to request ${documentName} from KAWEESA CHILDREN'S MINISTRY LIMITED.`;
+    redirectToWhatsApp("general", customMessage);
   };
 
   const annualReports = [

@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Mail, Phone, Users, BookOpen, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -184,9 +183,9 @@ const Careers = () => {
                         <Mail className="w-5 h-5 mr-2" />
                         hr@kaweesaministry.org
                       </a>
-                      <a href="tel:+256772477774" className="flex items-center text-gray-700 hover:text-orange-600">
+                      <a href="tel:+256762080041" className="flex items-center text-gray-700 hover:text-orange-600">
                         <Phone className="w-5 h-5 mr-2" />
-                        +256 772 477 774
+                        +256 762 080 041
                       </a>
                     </div>
                   </div>

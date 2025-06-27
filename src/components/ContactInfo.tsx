@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { redirectToWhatsApp } from '@/utils/whatsappHelper';
@@ -34,7 +33,7 @@ const ContactInfo = () => {
                   className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  +1 (555) 123-4567
+                  +256 762 080 041
                 </button>
               </div>
             </div>
@@ -54,7 +53,7 @@ const ContactInfo = () => {
                   className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  info@elitefoundation.org
+                  info@kaweesaministry.org
                 </button>
               </div>
             </div>
