@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Users, BookOpen, Heart, Home, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -44,7 +43,7 @@ const Impact = () => {
   ];
   
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/478c2f7f-c3b9-48ff-a214-9cdcec5fa919.png">
       <SEO 
         title="Our Impact - Elite Foundation" 
         description="See the real impact of our work with children and families worldwide. Success stories, statistics, and testimonials from our programs."

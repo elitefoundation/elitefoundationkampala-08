@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { blogPosts } from '@/data/blogPosts';
 import PageLayout from '@/components/PageLayout';
@@ -14,7 +13,7 @@ const BlogPostDetail = () => {
 
   if (!post) {
     return (
-      <PageLayout>
+      <PageLayout backgroundImage="/lovable-uploads/700e27d7-0513-4bfa-8ac4-f7fd6087594c.png">
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
           <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
@@ -30,7 +29,7 @@ const BlogPostDetail = () => {
   }
 
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png">
       <SEO 
         title={`${post.title} - WRLDS`}
         description={post.metaDescription || post.excerpt}

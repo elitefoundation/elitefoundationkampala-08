@@ -14,8 +14,8 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <PageLayout>
-      <div className="min-h-[50vh] flex items-center justify-center bg-gray-100">
+    <PageLayout backgroundImage="/lovable-uploads/a67fc668-534c-430f-b2a3-e0062a6a4cb0.png">
+      <div className="min-h-[50vh] flex items-center justify-center bg-gray-100/80 backdrop-blur-sm">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">404</h1>
           <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>

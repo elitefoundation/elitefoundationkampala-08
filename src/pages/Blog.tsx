@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,7 @@ const Blog = () => {
   const otherPosts = blogPosts.filter(post => post.id !== featuredPost?.id);
   
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png">
       <SEO 
         title="WRLDS - News and insights about smart textile technology" 
         description="Stay updated with the latest news and insights about sensor-integrated textiles and smart technology from WRLDS Technologies."
