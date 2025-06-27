@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, BookOpen } from "lucide-react";
@@ -11,17 +10,17 @@ const Hero = () => {
 
   const heroImages = [
     {
-      url: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png",
+      url: "/lovable-uploads/478c2f7f-c3b9-48ff-a214-9cdcec5fa919.png",
       alt: "Child proudly showing new shoes - education and supply support",
       title: "Empowering Through Education"
     },
     {
-      url: "/lovable-uploads/380e8295-b0a7-49e0-bb08-3cd214481dd6.png", 
+      url: "/lovable-uploads/20649706-fb81-49b3-9fab-6900d6260427.png", 
       alt: "Joyful child with big smile - happiness through care",
       title: "Bringing Joy & Hope"
     },
     {
-      url: "/lovable-uploads/1aef3f11-afc1-4188-84e6-1b175af029f8.png",
+      url: "/lovable-uploads/a67fc668-534c-430f-b2a3-e0062a6a4cb0.png",
       alt: "Caring embrace between children - protection and community",
       title: "Building Strong Communities"
     }
