@@ -16,10 +16,10 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
   const { toast } = useToast();
 
   const bankDetails = {
-    accountNumber: "1011101249360",
-    swiftCode: "EQBLUGKAXXX",
-    bankName: "Equity Bank Uganda Ltd",
-    accountName: "ELITE FOUNDATION"
+    accountNumber: "9030026168286",
+    swiftCode: "SBICUGKX",
+    bankName: "Stanbic Bank Uganda",
+    accountName: "Kimera Godfrey"
   };
 
   const copyToClipboard = async (text: string, field: string) => {
@@ -173,10 +173,9 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
         <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
           <h4 className="font-semibold text-blue-900 mb-2">International Wire Transfer Guide</h4>
           <ul className="text-sm text-blue-800 space-y-1">
-            <li>• The SWIFT code identifies Equity Bank Uganda for international transfers</li>
-            <li>• "XXX" in the code represents the specific branch identifier</li>
-            <li>• "EQBLUGKA" identifies Equity Bank Uganda Ltd</li>
-            <li>• Please include your name and "ELITE FOUNDATION DONATION" in the transfer reference</li>
+            <li>• The SWIFT code identifies Stanbic Bank Uganda for international transfers</li>
+            <li>• "SBICUGKX" identifies Stanbic Bank Uganda and its main branch in Kampala</li>
+            <li>• Please include your name and "KAWEESA CHILDREN'S MINISTRY DONATION" in the transfer reference</li>
             <li>• Transfer fees may apply depending on your bank</li>
           </ul>
         </div>
