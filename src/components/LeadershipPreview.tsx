@@ -15,7 +15,7 @@ const LeadershipPreview = () => {
     {
       name: "Miss Cindy W",
       role: "Program Director",
-      bio: "Education specialist with focus on rural development",
+      bio: "since day one donor",
       image: "/lovable-uploads/19cc4c5b-35b2-4f5e-b0f4-f5370644ce8f.png"
     }
   ];
