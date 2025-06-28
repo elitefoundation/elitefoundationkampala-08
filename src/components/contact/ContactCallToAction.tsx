@@ -13,7 +13,7 @@ const ContactCallToAction = () => {
     >
       <h2 className="text-3xl font-bold mb-4">Ready to Make a Difference?</h2>
       <p className="text-xl mb-6 text-orange-100">
-        Join our mission to transform children's lives. Every conversation starts with a simple message.
+        Join our mission to transform children's lives through excellence in action. Every conversation starts with a simple message.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <button 

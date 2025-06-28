@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,7 @@ const Programs = () => {
       icon: <BookOpen className="w-8 h-8" />,
       color: "bg-blue-100 text-blue-600",
       benefits: ["School fees coverage", "Learning materials", "Uniforms and supplies", "After-school tutoring"],
-      served: "30+ children"
+      served: "24+ children"
     },
     {
       id: 2,
@@ -24,7 +25,7 @@ const Programs = () => {
       icon: <Heart className="w-8 h-8" />,
       color: "bg-red-100 text-red-600",
       benefits: ["Regular health checkups", "Nutritious daily meals", "Vaccination programs", "Health education"],
-      served: "45+ children"
+      served: "20+ children"
     },
     {
       id: 3,
@@ -42,7 +43,7 @@ const Programs = () => {
       icon: <Users className="w-8 h-8" />,
       color: "bg-purple-100 text-purple-600",
       benefits: ["Skills training", "Microfinance loans", "Parenting support", "Income generation"],
-      served: "25+ families"
+      served: "5+ families"
     },
     {
       id: 5,
@@ -51,7 +52,7 @@ const Programs = () => {
       icon: <Utensils className="w-8 h-8" />,
       color: "bg-orange-100 text-orange-600",
       benefits: ["Emergency food aid", "Temporary shelter", "Medical emergency support", "Crisis intervention"],
-      served: "20+ families"
+      served: "10+ families"
     },
     {
       id: 6,
@@ -60,16 +61,16 @@ const Programs = () => {
       icon: <Briefcase className="w-8 h-8" />,
       color: "bg-indigo-100 text-indigo-600",
       benefits: ["Technical skills training", "Business mentorship", "Job placement support", "Entrepreneurship guidance"],
-      served: "12+ youth"
+      served: "8+ youth"
     }
   ];
 
   return (
     <PageLayout backgroundImage="/lovable-uploads/b04afcbd-f46d-441b-875a-be165448e7e9.png">
       <SEO 
-        title="Our Programs - KAWEESA CHILDREN'S MINISTRY LIMITED" 
-        description="Discover our comprehensive programs supporting children in Uganda through education, health, protection, and family empowerment initiatives."
-        keywords={['children programs', 'education support', 'child protection', 'family empowerment', 'Uganda charity programs']}
+        title="Our Programs - Elite Foundation" 
+        description="Discover our comprehensive programs supporting children worldwide through education, health, protection, and family empowerment initiatives."
+        keywords={['children programs', 'education support', 'child protection', 'family empowerment', 'elite foundation programs']}
       />
       
       <div className="w-full pt-24 pb-12 bg-gradient-to-b from-blue-500 to-purple-600 text-white">
@@ -89,7 +90,7 @@ const Programs = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Comprehensive support systems designed to nurture, protect, and empower children and families in Uganda
+              Comprehensive support systems designed to nurture, protect, and empower children and families through excellence in action
             </motion.p>
           </div>
         </div>
@@ -145,7 +146,7 @@ const Programs = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Ready to Make a Difference?</h2>
           <p className="text-xl mb-6 text-orange-100">
-            Your support helps us expand these vital programs and reach more children in need
+            Your support helps us expand these vital programs and reach more children in need through excellence in action
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -155,10 +156,10 @@ const Programs = () => {
               Support Our Programs
             </Link>
             <Link 
-              to="/sponsor-child" 
+              to="/volunteer" 
               className="px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-semibold border border-orange-400"
             >
-              Sponsor a Child
+              Volunteer With Us
             </Link>
           </div>
         </motion.div>

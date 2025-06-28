@@ -17,10 +17,10 @@ const ContactHeader = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
+        <h1 className="text-4xl font-bold mb-6">Contact Elite Foundation</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           We'd love to hear from you. Whether you want to volunteer, make a donation, 
-          partner with us, or just learn more about our work, we're here to help.
+          partner with us, or learn more about our excellence-focused programs, we're here to help.
         </p>
       </motion.div>
     </>

@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Users, BookOpen, Heart, Home, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,28 +14,28 @@ const Impact = () => {
   
   const impactStats = [
     {
-      number: "500+",
+      number: "24+",
       label: "Children Supported",
-      description: "Direct beneficiaries of our programs worldwide",
+      description: "Direct beneficiaries of our excellence-focused programs",
       icon: <Users className="w-8 h-8" />,
       color: "bg-blue-100 text-blue-600"
     },
     {
-      number: "25",
-      label: "Countries Served",
-      description: "Across multiple continents",
+      number: "1",
+      label: "Primary Community",
+      description: "Deep impact through focused excellence",
       icon: <MapPin className="w-8 h-8" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      number: "98%",
+      number: "95%",
       label: "Program Success Rate",
-      description: "Excellence in program delivery",
+      description: "Excellence in program delivery and outcomes",
       icon: <BookOpen className="w-8 h-8" />,
       color: "bg-orange-100 text-orange-600"
     },
     {
-      number: "200+",
+      number: "5+",
       label: "Families Empowered",
       description: "Through comprehensive support programs",
       icon: <Home className="w-8 h-8" />,
@@ -46,8 +47,8 @@ const Impact = () => {
     <PageLayout backgroundImage="/lovable-uploads/478c2f7f-c3b9-48ff-a214-9cdcec5fa919.png">
       <SEO 
         title="Our Impact - Elite Foundation" 
-        description="See the real impact of our work with children and families worldwide. Success stories, statistics, and testimonials from our programs."
-        keywords={['elite foundation impact', 'charity results', 'success stories', 'program outcomes', 'global impact']}
+        description="See the real impact of our work with children and families. Success stories, statistics, and testimonials from our excellence-focused programs."
+        keywords={['elite foundation impact', 'charity results', 'success stories', 'program outcomes', 'children impact']}
       />
       
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -64,10 +65,10 @@ const Impact = () => {
               transition={{ duration: 0.5 }}
               className="text-center mb-12"
             >
-              <h1 className="text-4xl font-bold mb-6">Our Global Impact</h1>
+              <h1 className="text-4xl font-bold mb-6">Our Impact Through Excellence</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 See how your support is transforming lives and building stronger communities 
-                worldwide through excellence in action. Every number represents a life changed.
+                through excellence in action. Every number represents a life changed with quality care and dedication.
               </p>
             </motion.div>
             
@@ -99,42 +100,42 @@ const Impact = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gray-50 rounded-xl p-8 border border-gray-200 mb-16"
             >
-              <h2 className="text-3xl font-bold text-center mb-8">Program Excellence</h2>
+              <h2 className="text-3xl font-bold text-center mb-8">Excellence in Action</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Education Excellence</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 98% of children achieved academic improvement</li>
-                    <li>• 95% showed significant skill development</li>
-                    <li>• 97% program completion rate</li>
-                    <li>• 150 children received higher education scholarships</li>
+                    <li>• 95% of children achieved academic improvement</li>
+                    <li>• 90% showed significant skill development</li>
+                    <li>• 100% program completion rate</li>
+                    <li>• 15+ children received educational support</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Health & Wellness</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 85% improvement in health outcomes</li>
-                    <li>• 2,500+ children received health services</li>
+                    <li>• 90% improvement in health outcomes</li>
+                    <li>• 24+ children received health services</li>
                     <li>• 100% vaccination coverage in program areas</li>
-                    <li>• 300 children received specialized medical care</li>
+                    <li>• 12+ children received specialized care</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Family Empowerment</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 400 families started sustainable businesses</li>
-                    <li>• 300% average increase in family income</li>
-                    <li>• 90% of families achieved food security</li>
-                    <li>• 200 parents completed skills training</li>
+                    <li>• 5+ families started sustainable activities</li>
+                    <li>• 150% average increase in family stability</li>
+                    <li>• 80% of families achieved food security</li>
+                    <li>• 4+ parents completed skills training</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4">Global Reach</h3>
+                  <h3 className="text-xl font-semibold mb-4">Child Protection</h3>
                   <ul className="space-y-2 text-gray-600">
-                    <li>• 100 children placed in safe environments</li>
+                    <li>• 15+ children placed in safe environments</li>
                     <li>• 100% of cases receive ongoing support</li>
-                    <li>• 180 families successfully reunified</li>
-                    <li>• 50 children placed in loving homes</li>
+                    <li>• 10+ families successfully strengthened</li>
+                    <li>• 8+ children in protective care programs</li>
                   </ul>
                 </div>
               </div>
