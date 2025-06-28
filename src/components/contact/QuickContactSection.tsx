@@ -14,7 +14,7 @@ const QuickContactSection = () => {
           <Mail className="w-5 h-5 text-blue-600 mr-3" />
           <div className="text-left">
             <h4 className="font-semibold text-blue-900">General Inquiries</h4>
-            <p className="text-blue-700 text-sm">info@kaweesaministry.org</p>
+            <p className="text-blue-700 text-sm">Kimeragodfreyadams@gmail.com</p>
           </div>
         </button>
         <button 
@@ -23,8 +23,8 @@ const QuickContactSection = () => {
         >
           <Phone className="w-5 h-5 text-green-600 mr-3" />
           <div className="text-left">
-            <h4 className="font-semibold text-green-900">Emergency Contact</h4>
-            <p className="text-green-700 text-sm">+256 762 080 041</p>
+            <h4 className="font-semibold text-green-900">Phone Contact</h4>
+            <p className="text-green-700 text-sm">+256 762 080 041 / +256 706 196 708</p>
           </div>
         </button>
         <button 
@@ -33,8 +33,8 @@ const QuickContactSection = () => {
         >
           <MapPin className="w-5 h-5 text-orange-600 mr-3" />
           <div className="text-left">
-            <h4 className="font-semibold text-orange-900">Program Sites</h4>
-            <p className="text-orange-700 text-sm">Multiple locations across Uganda</p>
+            <h4 className="font-semibold text-orange-900">Visit Our Office</h4>
+            <p className="text-orange-700 text-sm">Nansana Wakiso Uganda</p>
           </div>
         </button>
       </div>

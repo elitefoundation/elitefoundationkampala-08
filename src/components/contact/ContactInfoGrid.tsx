@@ -8,21 +8,21 @@ const ContactInfoGrid = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+256 762 080 041"],
+      details: ["+256 762 080 041", "+256 706 196 708"],
       color: "bg-blue-100 text-blue-600",
       onClick: () => redirectToWhatsApp("general")
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["info@kaweesaministry.org", "programs@kaweesaministry.org"],
+      details: ["Kimeragodfreyadams@gmail.com"],
       color: "bg-green-100 text-green-600",
       onClick: () => redirectToWhatsApp("general")
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
-      details: ["Kampala, Uganda", "P.O. Box 12345"],
+      details: ["Nansana Wakiso Uganda"],
       color: "bg-orange-100 text-orange-600"
     },
     {

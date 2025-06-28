@@ -87,21 +87,21 @@ const Footer = () => {
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>Global Operations</span>
+                  <span>Nansana Wakiso Uganda</span>
                 </div>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
                   className="flex items-center hover:text-orange-400 transition-colors"
                 >
                   <Mail className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>info@elitefoundation.org</span>
+                  <span>Kimeragodfreyadams@gmail.com</span>
                 </button>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
                   className="flex items-center hover:text-orange-400 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-3 text-orange-400" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+256 762 080 041 / +256 706 196 708</span>
                 </button>
               </div>
               
