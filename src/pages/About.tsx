@@ -26,7 +26,7 @@ const About = () => {
   ];
   
   return (
-    <PageLayout backgroundImage="/lovable-uploads/d4c382cc-3627-4582-a008-0cd17f6a02b3.png">
+    <PageLayout backgroundImage="/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
