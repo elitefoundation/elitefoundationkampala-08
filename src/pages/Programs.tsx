@@ -65,7 +65,7 @@ const Programs = () => {
   ];
 
   return (
-    <PageLayout backgroundImage="/lovable-uploads/30473baa-85f4-4931-aad9-c722ae7a4918.png">
+    <PageLayout backgroundImage="/lovable-uploads/b04afcbd-f46d-441b-875a-be165448e7e9.png">
       <SEO 
         title="Our Programs - KAWEESA CHILDREN'S MINISTRY LIMITED" 
         description="Discover our comprehensive programs supporting children in Uganda through education, health, protection, and family empowerment initiatives."

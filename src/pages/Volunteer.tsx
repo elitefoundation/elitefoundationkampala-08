@@ -61,7 +61,7 @@ const Volunteer = () => {
   };
   
   return (
-    <PageLayout backgroundImage="/lovable-uploads/b862d5ae-6abb-44da-84f0-00a222f62906.png">
+    <PageLayout backgroundImage="/lovable-uploads/3fc60ca1-b5bf-43df-b895-319dfcc674e5.png">
       <SEO 
         title="Volunteer - ELITE FOUNDATION" 
         description="Join our mission to transform children's lives in Uganda. Volunteer opportunities in education, healthcare, community outreach, and more."

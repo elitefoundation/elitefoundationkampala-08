@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
@@ -16,7 +15,7 @@ const Contact = () => {
   }, []);
   
   return (
-    <PageLayout backgroundImage="/lovable-uploads/11e92b89-ed02-453a-9888-56cd91807f2d.png">
+    <PageLayout backgroundImage="/lovable-uploads/e05b7927-319a-4276-ab7a-b48cfa9162cc.png">
       <SEO 
         title="Contact Us - ELITE FOUNDATION" 
         description="Get in touch with ELITE FOUNDATION. Contact us for volunteering, donations, partnerships, or general inquiries."
