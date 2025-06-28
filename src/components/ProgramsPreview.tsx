@@ -32,12 +32,12 @@ const ProgramsPreview = () => {
       image: "https://github.com/drewversedesign/kaweesa-ministries/blob/main/IMG-20250518-WA0066.jpg?raw=true"
     },
     {
-      title: "Family Empowerment",
-      description: "Skills training and microfinance for families",
+      title: "Community Engagement",
+      description: "Building relationships and connections within communities",
       icon: <Users className="w-6 h-6" />,
       color: "bg-purple-100 text-purple-600",
-      served: "5+ families",
-      image: "/lovable-uploads/1aef3f11-afc1-4188-84e6-1b175af029f8.png"
+      served: "20+ children",
+      image: "/lovable-uploads/8b47cc37-07ce-4932-b7e1-0d99bc2a14db.png"
     }
   ];
 
