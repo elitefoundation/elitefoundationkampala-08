@@ -1,5 +1,4 @@
-
-import { ArrowRight, Linkedin, Mail, MapPin, Phone, Facebook, Twitter, Instagram } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -107,16 +106,22 @@ const Footer = () => {
               
               {/* Social Media Links */}
               <div className="flex space-x-4 mt-6">
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Facebook">
+                <a 
+                  href="https://www.facebook.com/share/184Xgi7v6U/?mibextid=wwXIfr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-orange-400 transition-colors" 
+                  aria-label="Facebook"
+                >
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Twitter">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors" aria-label="Instagram">
+                <a 
+                  href="https://www.instagram.com/elite_foundation_uganda?igsh=YzM1c2Q0MmpoNG5n&utm_source=qr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-orange-400 transition-colors" 
+                  aria-label="Instagram"
+                >
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
