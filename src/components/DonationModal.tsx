@@ -3,25 +3,27 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, CreditCard, Building2, CheckCircle, Loader2 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-
 interface DonationModalProps {
   isOpen: boolean;
   onClose: () => void;
   amount?: string;
 }
-
-const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
+const DonationModal = ({
+  isOpen,
+  onClose,
+  amount
+}: DonationModalProps) => {
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [isPayPalLoading, setIsPayPalLoading] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const bankDetails = {
     accountNumber: "9030026168286",
     swiftCode: "SBICUGKX",
     bankName: "Stanbic Bank Uganda",
     accountName: "Kimera Godfrey"
   };
-
   const copyToClipboard = async (text: string, field: string) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -32,7 +34,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
         variant: "default",
         duration: 3000
       });
-      
+
       // Reset the copied state after 3 seconds
       setTimeout(() => {
         setCopiedField(null);
@@ -45,11 +47,10 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
       });
     }
   };
-
   const handlePayPalDonation = () => {
     setIsPayPalLoading(true);
     const url = "https://www.paypal.com/donate/?hosted_button_id=NT42R89QRVQ42";
-    
+
     // Simulate loading for better UX
     setTimeout(() => {
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -57,9 +58,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
       onClose();
     }, 500);
   };
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+  return <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center mb-2">
@@ -85,22 +84,14 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
             <p className="text-gray-600 mb-4 text-sm">
               Donate securely using PayPal or credit/debit card. Instant processing.
             </p>
-            <Button 
-              onClick={handlePayPalDonation}
-              disabled={isPayPalLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700"
-            >
-              {isPayPalLoading ? (
-                <>
+            <Button onClick={handlePayPalDonation} disabled={isPayPalLoading} className="w-full bg-blue-600 hover:bg-blue-700">
+              {isPayPalLoading ? <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   Opening PayPal...
-                </>
-              ) : (
-                <>
+                </> : <>
                   Donate with PayPal
                   <ExternalLink className="ml-2 h-4 w-4" />
-                </>
-              )}
+                </>}
             </Button>
           </div>
 
@@ -125,17 +116,8 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
                     <p className="text-xs text-gray-500 uppercase tracking-wide">Account Number</p>
                     <p className="font-mono font-semibold">{bankDetails.accountNumber}</p>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    onClick={() => copyToClipboard(bankDetails.accountNumber, "Account Number")}
-                    className="h-8 w-8 p-0 hover:bg-green-100"
-                  >
-                    {copiedField === "Account Number" ? (
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                    ) : (
-                      <Copy className="h-4 w-4" />
-                    )}
+                  <Button size="sm" variant="ghost" onClick={() => copyToClipboard(bankDetails.accountNumber, "Account Number")} className="h-8 w-8 p-0 hover:bg-green-100">
+                    {copiedField === "Account Number" ? <CheckCircle className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>
@@ -146,17 +128,8 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
                     <p className="text-xs text-gray-500 uppercase tracking-wide">SWIFT Code</p>
                     <p className="font-mono font-semibold">{bankDetails.swiftCode}</p>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    onClick={() => copyToClipboard(bankDetails.swiftCode, "SWIFT Code")}
-                    className="h-8 w-8 p-0 hover:bg-green-100"
-                  >
-                    {copiedField === "SWIFT Code" ? (
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                    ) : (
-                      <Copy className="h-4 w-4" />
-                    )}
+                  <Button size="sm" variant="ghost" onClick={() => copyToClipboard(bankDetails.swiftCode, "SWIFT Code")} className="h-8 w-8 p-0 hover:bg-green-100">
+                    {copiedField === "SWIFT Code" ? <CheckCircle className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>
@@ -175,7 +148,7 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
           <ul className="text-sm text-blue-800 space-y-1">
             <li>• The SWIFT code identifies Stanbic Bank Uganda for international transfers</li>
             <li>• "SBICUGKX" identifies Stanbic Bank Uganda and its main branch in Kampala</li>
-            <li>• Please include your name and "KAWEESA CHILDREN'S MINISTRY DONATION" in the transfer reference</li>
+            <li>• Please include your name and "Kimeera Godffrey" in the transfer reference</li>
             <li>• Transfer fees may apply depending on your bank</li>
           </ul>
         </div>
@@ -186,8 +159,6 @@ const DonationModal = ({ isOpen, onClose, amount }: DonationModalProps) => {
           </p>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 export default DonationModal;
