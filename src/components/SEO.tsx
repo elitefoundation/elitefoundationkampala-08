@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -16,12 +15,12 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/d6919e81-75ee-4a42-88d4-b500436e5440.png',
+  imageUrl = '/lovable-uploads/elite-foundation-logo.png',
   publishDate,
   modifiedDate,
   author,
   category,
-  keywords = ['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization'],
+  keywords = ['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization', 'nonprofit', 'children rights', 'social impact'],
   isBlogPost = false
 }) => {
   const location = useLocation();
@@ -66,6 +65,18 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywordString} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
+      {/* Language and region */}
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="UG" />
+      <meta name="geo.placename" content="Kampala, Uganda" />
+      <meta name="geo.position" content="0.3476;32.5825" />
+      <meta name="ICBM" content="0.3476, 32.5825" />
+      
+      {/* Author and organization */}
+      <meta name="author" content={author || name} />
+      <meta name="copyright" content="Elite Foundation" />
+      <meta name="organization" content="Elite Foundation" />
+      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={isBlogPost ? 'article' : type} />
       <meta property="og:url" content={currentUrl} />
@@ -74,12 +85,15 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Elite Foundation Logo" />
       <meta property="og:site_name" content="Elite Foundation" />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="en_GB" />
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
       {isBlogPost && <meta property="article:publisher" content="https://elitefoundation.org" />}
+      {isBlogPost && <meta property="article:author" content={author || name} />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -87,10 +101,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImageUrl} />
+      <meta name="twitter:image:alt" content="Elite Foundation Logo" />
+      <meta name="twitter:site" content="@elitefoundation" />
+      <meta name="twitter:creator" content="@elitefoundation" />
       
       {/* LinkedIn specific */}
       <meta property="og:image:secure_url" content={absoluteImageUrl} />
-      <meta name="author" content={author || name} />
       
       {/* Pinterest specific */}
       <meta name="pinterest:description" content={description} />
@@ -99,6 +115,23 @@ const SEO: React.FC<SEOProps> = ({
       {/* Additional SEO meta tags */}
       <meta name="theme-color" content="#ea580c" />
       <meta name="msapplication-TileColor" content="#ea580c" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Elite Foundation" />
+      
+      {/* Mobile optimization */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <meta name="format-detection" content="telephone=no" />
+      
+      {/* Security headers */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      {/* Performance optimization */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       
       {/* JSON-LD structured data */}
       <script type="application/ld+json">

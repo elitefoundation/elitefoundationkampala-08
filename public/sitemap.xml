@@ -1,64 +1,75 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kaweesachildrensministries.org/</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/about</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/about</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/programs</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/programs</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/impact</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/impact</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/volunteer</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/volunteer</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/donate</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/donate</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/contact</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/contact</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/testimonials</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/testimonials</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/resources</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/resources</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kaweesachildrensministries.org/blog</loc>
-    <lastmod>2025-06-22</lastmod>
+    <loc>https://elitefoundation.org/blog</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elitefoundation.org/careers</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elitefoundation.org/privacy-policy</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

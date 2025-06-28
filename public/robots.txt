@@ -1,10 +1,17 @@
-
 User-agent: *
 Allow: /
-Sitemap: https://kaweesachildrensministries.org/sitemap.xml
+Sitemap: https://elitefoundation.org/sitemap.xml
 
 # Sitemap location
-Sitemap: https://kaweesachildrensministries.org/sitemap.xml
+Sitemap: https://elitefoundation.org/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 10
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all other content
+Allow: /public/
+Allow: /lovable-uploads/
