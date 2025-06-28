@@ -49,8 +49,8 @@ export const SEO_CONFIG = {
       'uganda',
       'east africa'
     ],
-    image: '/lovable-uploads/d6919e81-75ee-4a42-88d4-b500436e5440.png',
-    logo: '/lovable-uploads/d4aa9dda-f549-4c67-92aa-5a86592a3467.png'
+    image: '/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
+    logo: '/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png'
   },
   
   // Page-specific configurations
@@ -133,4 +133,4 @@ export const getPageSEO = (pathname: string) => {
 
 export const getFullUrl = (path: string) => {
   return `${SEO_CONFIG.baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
-}; 
+};

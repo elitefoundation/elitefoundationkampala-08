@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -15,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/elite-foundation-logo.png',
+  imageUrl = '/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
   publishDate,
   modifiedDate,
   author,
@@ -85,7 +86,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Elite Foundation Logo" />
+      <meta property="og:image:alt" content="Elite Foundation - Handshake Heart Logo" />
       <meta property="og:site_name" content="Elite Foundation" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="en_GB" />
@@ -101,7 +102,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImageUrl} />
-      <meta name="twitter:image:alt" content="Elite Foundation Logo" />
+      <meta name="twitter:image:alt" content="Elite Foundation - Handshake Heart Logo" />
       <meta name="twitter:site" content="@elitefoundation" />
       <meta name="twitter:creator" content="@elitefoundation" />
       
