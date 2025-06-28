@@ -12,16 +12,17 @@ const ContactInfoSection = () => {
       <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 text-center">
-          <h4 className="font-bold text-blue-900 mb-2">Global Operations</h4>
-          <p className="text-blue-800">Worldwide Presence</p>
+          <h4 className="font-bold text-blue-900 mb-2">Location</h4>
+          <p className="text-blue-800">Nansana Wakiso Uganda</p>
         </div>
         <div className="bg-green-50 rounded-xl p-6 border border-green-200 text-center">
           <h4 className="font-bold text-green-900 mb-2">Email</h4>
-          <p className="text-green-800">info@elitefoundation.org</p>
+          <p className="text-green-800">Kimeragodfreyadams@gmail.com</p>
         </div>
         <div className="bg-orange-50 rounded-xl p-6 border border-orange-200 text-center">
           <h4 className="font-bold text-orange-900 mb-2">Phone</h4>
-          <p className="text-orange-800">+1 (555) 123-4567</p>
+          <p className="text-orange-800">+256 762 080 041</p>
+          <p className="text-orange-800">+256 706 196 708</p>
         </div>
       </div>
     </motion.div>
