@@ -148,7 +148,7 @@ const DonationModal = ({
           <ul className="text-sm text-blue-800 space-y-1">
             <li>• The SWIFT code identifies Stanbic Bank Uganda for international transfers</li>
             <li>• "SBICUGKX" identifies Stanbic Bank Uganda and its main branch in Kampala</li>
-            <li>• Please include your name and "Kimeera Godffrey" in the transfer reference</li>
+            <li>• Please include your name and "ELITE FOUNDATION" in the transfer reference</li>
             <li>• Transfer fees may apply depending on your bank</li>
           </ul>
         </div>
