@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/d4aa9dda-f549-4c67-92aa-5a86592a3467.png',
+  imageUrl = '/lovable-uploads/d6919e81-75ee-4a42-88d4-b500436e5440.png',
   publishDate,
   modifiedDate,
   author,

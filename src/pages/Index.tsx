@@ -29,7 +29,7 @@ const Index = () => {
       <SEO 
         title="Elite Foundation - Transforming Lives Through Excellence and Care" 
         description="Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs."
-        imageUrl="/lovable-uploads/526dc38a-25fa-40d4-b520-425b23ae0464.png"
+        imageUrl="/lovable-uploads/d6919e81-75ee-4a42-88d4-b500436e5440.png"
         keywords={['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
       />
       <Hero />
