@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs.',
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
+  imageUrl = '/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
   publishDate,
   modifiedDate,
   author,
@@ -85,15 +85,15 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Elite Foundation - Handshake Heart Logo" />
+      <meta property="og:image:height" content="1200" />
+      <meta property="og:image:alt" content="Elite Foundation - Non-Profit Organization Logo" />
       <meta property="og:site_name" content="Elite Foundation" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="en_GB" />
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {isBlogPost && <meta property="article:publisher" content="https://elitefoundation.org" />}
+      {isBlogPost && <meta property="article:publisher" content="https://elitefoundation.online" />}
       {isBlogPost && <meta property="article:author" content={author || name} />}
       
       {/* Twitter */}
@@ -102,7 +102,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={absoluteImageUrl} />
-      <meta name="twitter:image:alt" content="Elite Foundation - Handshake Heart Logo" />
+      <meta name="twitter:image:alt" content="Elite Foundation - Non-Profit Organization Logo" />
       <meta name="twitter:site" content="@elitefoundation" />
       <meta name="twitter:creator" content="@elitefoundation" />
       
@@ -112,6 +112,10 @@ const SEO: React.FC<SEOProps> = ({
       {/* Pinterest specific */}
       <meta name="pinterest:description" content={description} />
       <meta name="pinterest:image" content={absoluteImageUrl} />
+      
+      {/* WhatsApp specific optimizations */}
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:secure_url" content={absoluteImageUrl} />
       
       {/* Additional SEO meta tags */}
       <meta name="theme-color" content="#ea580c" />

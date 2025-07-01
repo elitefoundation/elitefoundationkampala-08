@@ -6,11 +6,11 @@ export const createOrganizationStructuredData = () => ({
   url: 'https://elitefoundation.online',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
-    width: 512,
-    height: 512
+    url: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+    width: 1200,
+    height: 1200
   },
-  image: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
+  image: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
   description: 'Transforming children\'s lives through excellence, care, education, and community development',
   mission: 'To transform the lives of children through excellence, care, education, health, protection, and community development programs',
   foundingDate: '2020',
@@ -133,7 +133,7 @@ export const createBlogPostStructuredData = (
     '@type': 'ImageObject',
     url: absoluteImageUrl,
     width: 1200,
-    height: 630
+    height: 1200
   },
   datePublished: publishDate,
   dateModified: modifiedDate || publishDate,
@@ -147,9 +147,9 @@ export const createBlogPostStructuredData = (
     name: 'Elite Foundation',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
-      width: 512,
-      height: 512
+      url: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+      width: 1200,
+      height: 1200
     },
     url: 'https://elitefoundation.online'
   },
