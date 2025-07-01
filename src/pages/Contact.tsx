@@ -1,3 +1,4 @@
+
 import PageLayout from '@/components/PageLayout';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
@@ -17,9 +18,20 @@ const Contact = () => {
   return (
     <PageLayout backgroundImage="/lovable-uploads/e05b7927-319a-4276-ab7a-b48cfa9162cc.png">
       <SEO 
-        title="Contact Us - ELITE FOUNDATION" 
-        description="Get in touch with ELITE FOUNDATION. Contact us for volunteering, donations, partnerships, or general inquiries."
-        keywords={['contact children ministry', 'Uganda charity contact', 'ministry contact information']}
+        title="Contact Elite Foundation - Uganda Nonprofit Organization | Kampala Office"
+        description="Contact Elite Foundation in Kampala, Uganda. Get in touch to learn about our programs, volunteer opportunities, partnerships, or to support our mission of transforming children's lives."
+        keywords={[
+          'contact Elite Foundation',
+          'Uganda nonprofit contact',
+          'Kampala charity contact',
+          'foundation contact information',
+          'nonprofit partnership opportunities',
+          'collaborate with foundation',
+          'foundation office Uganda',
+          'charity contact details',
+          'volunteer opportunities contact',
+          'donation inquiries Uganda'
+        ]}
       />
       
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">

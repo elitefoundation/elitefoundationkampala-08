@@ -27,10 +27,21 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Elite Foundation - Transforming Lives Through Excellence and Care" 
-        description="Elite Foundation is a dedicated organization committed to improving the lives of children through education, health, protection, and community development programs."
+        title="Elite Foundation - Transforming Children's Lives in Uganda | Nonprofit Organization Kampala"
+        description="Elite Foundation is a dedicated nonprofit organization transforming children's lives through education, healthcare, and community development programs in Kampala, Uganda and across East Africa. Join our mission to empower communities."
         imageUrl="/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png"
-        keywords={['elite foundation', 'children charity', 'child welfare', 'education programs', 'community development', 'child protection', 'charitable organization']}
+        keywords={[
+          'Elite Foundation',
+          'Uganda nonprofit foundation',
+          'child welfare foundation',
+          'education for underprivileged',
+          'community development programs',
+          'Kampala charity organization',
+          'youth empowerment programs',
+          'donate to Uganda charity',
+          'volunteer opportunities Uganda',
+          'support children in need'
+        ]}
       />
       <Hero />
       <PhotoGallery />

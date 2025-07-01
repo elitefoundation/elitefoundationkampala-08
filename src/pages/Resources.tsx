@@ -17,9 +17,20 @@ const Resources = () => {
   return (
     <PageLayout>
       <SEO 
-        title="Resources - ELITE FOUNDATION" 
-        description="Access our annual reports, educational materials, financial statements, and policy documents. Transparency and accountability in all our operations."
-        keywords={['annual reports', 'financial transparency', 'educational resources', 'child protection policies', 'charity accountability']}
+        title="Resources - Elite Foundation | Transparency Reports & Educational Materials Uganda"
+        description="Access Elite Foundation's annual reports, educational materials, financial statements, and policy documents. Transparency and accountability in our nonprofit operations serving children in Uganda."
+        keywords={[
+          'nonprofit resources Uganda',
+          'charity transparency reports',
+          'foundation annual reports',
+          'educational resources',
+          'community development guides',
+          'nonprofit accountability',
+          'charity financial reports',
+          'foundation impact reports',
+          'Elite Foundation transparency',
+          'Uganda charity resources'
+        ]}
       />
       
       <ResourcesHeader />
