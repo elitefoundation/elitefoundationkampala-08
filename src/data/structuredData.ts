@@ -3,14 +3,14 @@ export const createOrganizationStructuredData = () => ({
   '@type': 'NGO',
   name: 'Elite Foundation',
   alternateName: 'Elite Foundation Kampala',
-  url: 'https://elitefoundation.org',
+  url: 'https://elitefoundation.online',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://elitefoundation.org/lovable-uploads/elite-foundation-logo.png',
+    url: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
     width: 512,
     height: 512
   },
-  image: 'https://elitefoundation.org/lovable-uploads/elite-foundation-logo.png',
+  image: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
   description: 'Transforming children\'s lives through excellence, care, education, and community development',
   mission: 'To transform the lives of children through excellence, care, education, health, protection, and community development programs',
   foundingDate: '2020',
@@ -20,13 +20,13 @@ export const createOrganizationStructuredData = () => ({
     {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'info@elitefoundation.org',
+      email: 'info@elitefoundation.online',
       availableLanguage: 'English'
     },
     {
       '@type': 'ContactPoint',
       contactType: 'general',
-      email: 'contact@elitefoundation.org',
+      email: 'contact@elitefoundation.online',
       availableLanguage: 'English'
     }
   ],
@@ -140,18 +140,18 @@ export const createBlogPostStructuredData = (
   author: {
     '@type': 'Organization',
     name: author || 'Elite Foundation',
-    url: 'https://elitefoundation.org'
+    url: 'https://elitefoundation.online'
   },
   publisher: {
     '@type': 'Organization',
     name: 'Elite Foundation',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elitefoundation.org/lovable-uploads/elite-foundation-logo.png',
+      url: 'https://elitefoundation.online/lovable-uploads/ac672088-448c-4363-8ec8-e1b7189c9217.png',
       width: 512,
       height: 512
     },
-    url: 'https://elitefoundation.org'
+    url: 'https://elitefoundation.online'
   },
   description: description,
   keywords: keywords.join(', '),

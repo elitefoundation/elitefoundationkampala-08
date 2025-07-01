@@ -1,9 +1,10 @@
+
 User-agent: *
 Allow: /
-Sitemap: https://elitefoundation.org/sitemap.xml
+Sitemap: https://elitefoundation.online/sitemap.xml
 
 # Sitemap location
-Sitemap: https://elitefoundation.org/sitemap.xml
+Sitemap: https://elitefoundation.online/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 10
