@@ -22,7 +22,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+  imageUrl = '/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png',
   publishDate,
   modifiedDate,
   author,
@@ -109,7 +109,7 @@ const SEO: React.FC<SEOProps> = ({
       {isBlogPost && category && <meta property="article:section" content={category} />}
       {isBlogPost && publishDate && <meta property="article:published_time" content={publishDate} />}
       {isBlogPost && modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
-      {isBlogPost && <meta property="article:publisher" content="https://elitefoundation.online" />}
+      {isBlogPost && <meta property="article:publisher" content="https://elitefoundationuganda.online" />}
       {isBlogPost && <meta property="article:author" content={author || name} />}
       
       {/* Twitter - Enhanced */}

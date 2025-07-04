@@ -1,4 +1,3 @@
-
 export const createOrganizationStructuredData = () => ({
   '@context': 'https://schema.org',
   '@type': 'NGO',
@@ -7,11 +6,11 @@ export const createOrganizationStructuredData = () => ({
   url: 'https://elitefoundationuganda.online',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+    url: 'https://elitefoundationuganda.online/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png',
     width: 1200,
     height: 1200
   },
-  image: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+  image: 'https://elitefoundationuganda.online/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png',
   description: 'Transforming children\'s lives through excellence, care, education, and community development',
   mission: 'To transform the lives of children through excellence, care, education, health, protection, and community development programs',
   foundingDate: '2020',
@@ -148,7 +147,7 @@ export const createBlogPostStructuredData = (
     name: 'Elite Foundation',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+      url: 'https://elitefoundationuganda.online/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png',
       width: 1200,
       height: 1200
     },

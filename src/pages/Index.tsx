@@ -29,7 +29,7 @@ const Index = () => {
       <SEO 
         title="Elite Foundation - Transforming Children's Lives in Uganda | Nonprofit Organization Kampala"
         description="Elite Foundation is a dedicated nonprofit organization transforming children's lives through education, healthcare, and community development programs in Kampala, Uganda and across East Africa. Join our mission to empower communities."
-        imageUrl="/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png"
+        imageUrl="/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png"
         keywords={[
           'Elite Foundation',
           'Uganda nonprofit foundation',
