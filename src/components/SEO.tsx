@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -98,7 +99,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={enhancedDescription} />
       <meta property="og:image" content={absoluteImageUrl} />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Elite Foundation - Nonprofit Organization transforming children's lives in Uganda" />
       <meta property="og:site_name" content="Elite Foundation" />
       <meta property="og:locale" content="en_US" />
@@ -132,6 +133,11 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:secure_url" content={absoluteImageUrl} />
       
+      {/* Additional image meta tags for better social sharing */}
+      <meta name="image" content={absoluteImageUrl} />
+      <meta name="thumbnail" content={absoluteImageUrl} />
+      <meta property="og:image:url" content={absoluteImageUrl} />
+      
       {/* Additional SEO meta tags */}
       <meta name="theme-color" content="#ea580c" />
       <meta name="msapplication-TileColor" content="#ea580c" />
@@ -152,6 +158,9 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      
+      {/* Preload the social sharing image */}
+      <link rel="preload" href={absoluteImageUrl} as="image" />
       
       {/* JSON-LD structured data */}
       <script type="application/ld+json">
