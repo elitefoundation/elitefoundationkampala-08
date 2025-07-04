@@ -1,16 +1,17 @@
+
 export const createOrganizationStructuredData = () => ({
   '@context': 'https://schema.org',
   '@type': 'NGO',
   name: 'Elite Foundation',
-  alternateName: 'Elite Foundation Kampala',
-  url: 'https://elitefoundation.online',
+  alternateName: 'Elite Foundation Uganda',
+  url: 'https://elitefoundationuganda.online',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+    url: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
     width: 1200,
     height: 1200
   },
-  image: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+  image: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
   description: 'Transforming children\'s lives through excellence, care, education, and community development',
   mission: 'To transform the lives of children through excellence, care, education, health, protection, and community development programs',
   foundingDate: '2020',
@@ -20,13 +21,13 @@ export const createOrganizationStructuredData = () => ({
     {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'info@elitefoundation.online',
+      email: 'info@elitefoundationuganda.online',
       availableLanguage: 'English'
     },
     {
       '@type': 'ContactPoint',
       contactType: 'general',
-      email: 'contact@elitefoundation.online',
+      email: 'contact@elitefoundationuganda.online',
       availableLanguage: 'English'
     }
   ],
@@ -140,18 +141,18 @@ export const createBlogPostStructuredData = (
   author: {
     '@type': 'Organization',
     name: author || 'Elite Foundation',
-    url: 'https://elitefoundation.online'
+    url: 'https://elitefoundationuganda.online'
   },
   publisher: {
     '@type': 'Organization',
     name: 'Elite Foundation',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elitefoundation.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
+      url: 'https://elitefoundationuganda.online/lovable-uploads/353ee26c-994b-45f6-b50a-7201d0297389.png',
       width: 1200,
       height: 1200
     },
-    url: 'https://elitefoundation.online'
+    url: 'https://elitefoundationuganda.online'
   },
   description: description,
   keywords: keywords.join(', '),
