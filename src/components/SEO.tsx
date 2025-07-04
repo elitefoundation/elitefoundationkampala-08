@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
@@ -22,7 +21,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   type = 'website',
   name = 'Elite Foundation',
-  imageUrl = '/lovable-uploads/e4be3b43-f621-44ff-9567-0a0709ce4c22.png',
+  imageUrl = '/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
   publishDate,
   modifiedDate,
   author,
