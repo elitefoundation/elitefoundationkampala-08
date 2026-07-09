@@ -100,8 +100,8 @@ Each page has been optimized with:
 
 ## Analytics and Tracking
 
-### Google Tag Manager
-- Container ID: GTM-TZ8DHWCH
+### Google Tag (gtag.js)
+- Tag ID: G-PRLB9H36D2
 - Configured for Google Analytics
 - Ready for Facebook Pixel integration
 

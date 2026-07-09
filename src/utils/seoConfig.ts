@@ -104,8 +104,8 @@ export const SEO_CONFIG = {
   
   // Google Analytics and tracking
   analytics: {
-    googleTagManager: 'GTM-TZ8DHWCH',
-    googleAnalytics: 'GA_MEASUREMENT_ID', // Update with actual GA ID
+    googleTag: 'G-PRLB9H36D2',
+    googleAnalytics: 'G-PRLB9H36D2', // Updated with the new Google tag ID
     facebookPixel: 'FB_PIXEL_ID' // Update with actual Facebook Pixel ID
   },
   
