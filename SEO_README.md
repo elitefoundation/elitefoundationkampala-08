@@ -107,7 +107,7 @@ Each page has been optimized with:
 
 ### Recommended Analytics Setup
 1. Google Analytics 4 property
-2. Google Search Console verification
+2. Google Search Console verification (Code: 6BRKZIVUx-aOTWNoTmFuYQu29p4ufFiMpUwDsZetc30)
 3. Facebook Pixel for conversion tracking
 4. LinkedIn Insight Tag
 

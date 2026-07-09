@@ -106,6 +106,7 @@ export const SEO_CONFIG = {
   analytics: {
     googleTag: 'G-PRLB9H36D2',
     googleAnalytics: 'G-PRLB9H36D2', // Updated with the new Google tag ID
+    googleSiteVerification: '6BRKZIVUx-aOTWNoTmFuYQu29p4ufFiMpUwDsZetc30',
     facebookPixel: 'FB_PIXEL_ID' // Update with actual Facebook Pixel ID
   },
   
