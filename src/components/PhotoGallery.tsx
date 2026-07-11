@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import PhotoFilters from './PhotoFilters';
 import PhotoGrid, { GalleryImage } from './PhotoGrid';
 import PhotoLightbox from './PhotoLightbox';
@@ -9,7 +8,6 @@ import PhotoLightbox from './PhotoLightbox';
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [filter, setFilter] = useState<string>('all');
-  const [showAll, setShowAll] = useState<boolean>(false);
 
   const images: GalleryImage[] = [
     {
@@ -259,12 +257,9 @@ const PhotoGallery = () => {
   ];
 
   // Apply category filtering
-  const allFilteredImages = filter === 'all'
+  const filteredImages = filter === 'all'
     ? images
     : images.filter(img => img.category === filter);
-
-  // Apply pagination / toggle display limit
-  const filteredImages = showAll ? allFilteredImages : allFilteredImages.slice(0, 9);
 
   console.log('PhotoGallery: Filtered images count:', filteredImages.length);
 
@@ -305,8 +300,6 @@ const PhotoGallery = () => {
           activeFilter={filter}
           onFilterChange={(newFilter) => {
             setFilter(newFilter);
-            // Reset page limit toggle when filter changes
-            setShowAll(false);
           }}
         />
 
@@ -314,19 +307,6 @@ const PhotoGallery = () => {
           images={filteredImages}
           onImageSelect={setSelectedImage}
         />
-
-        {allFilteredImages.length > 9 && (
-          <div className="flex justify-center mt-8">
-            <Button
-              onClick={() => setShowAll(!showAll)}
-              variant="outline"
-              size="lg"
-              className="px-8 font-semibold shadow-sm hover:shadow"
-            >
-              {showAll ? 'Show Less' : `Show More (${allFilteredImages.length - 9} more)`}
-            </Button>
-          </div>
-        )}
 
         <PhotoLightbox
           selectedImage={selectedImage}
