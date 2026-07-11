@@ -13,10 +13,10 @@ const LeadershipPreview = () => {
       image: "/lovable-uploads/273495a9-cc19-4b45-9aa7-c60ff9f7432e.png"
     },
     {
-      name: "Miss Cindy W",
+      name: "Jen Weatherman",
       role: "Program Director",
       bio: "since day one donor",
-      image: "/lovable-uploads/19cc4c5b-35b2-4f5e-b0f4-f5370644ce8f.png"
+      image: "/lovable-uploads/jen-weatherman.jpeg"
     }
   ];
 
