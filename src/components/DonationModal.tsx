@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Copy, ExternalLink, CreditCard, Building2, CheckCircle, Loader2 } from 'lucide-react';
+import { Copy, Building2, CheckCircle } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 interface DonationModalProps {
   isOpen: boolean;
@@ -14,7 +14,6 @@ const DonationModal = ({
   amount
 }: DonationModalProps) => {
   const [copiedField, setCopiedField] = useState<string | null>(null);
-  const [isPayPalLoading, setIsPayPalLoading] = useState(false);
   const {
     toast
   } = useToast();
@@ -47,54 +46,18 @@ const DonationModal = ({
       });
     }
   };
-  const handlePayPalDonation = () => {
-    setIsPayPalLoading(true);
-    const url = "https://www.paypal.com/donate/?hosted_button_id=NT42R89QRVQ42";
-
-    // Simulate loading for better UX
-    setTimeout(() => {
-      window.open(url, '_blank', 'noopener,noreferrer');
-      setIsPayPalLoading(false);
-      onClose();
-    }, 500);
-  };
   return <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center mb-2">
-            Choose Your Donation Method
+            Bank Transfer Details
           </DialogTitle>
           <p className="text-gray-600 text-center">
             {amount ? `Donate ${amount}` : 'Make a donation'} to support vulnerable children worldwide
           </p>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          {/* PayPal Option */}
-          <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 transition-all">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                <CreditCard className="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">PayPal</h3>
-                <p className="text-sm text-gray-600">Quick & Secure</p>
-              </div>
-            </div>
-            <p className="text-gray-600 mb-4 text-sm">
-              Donate securely using PayPal or credit/debit card. Instant processing.
-            </p>
-            <Button onClick={handlePayPalDonation} disabled={isPayPalLoading} className="w-full bg-blue-600 hover:bg-blue-700">
-              {isPayPalLoading ? <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Opening PayPal...
-                </> : <>
-                  Donate with PayPal
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </>}
-            </Button>
-          </div>
-
+        <div className="mt-6">
           {/* Bank Transfer Option */}
           <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-green-300 transition-all">
             <div className="flex items-center mb-4">
