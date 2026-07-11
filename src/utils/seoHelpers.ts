@@ -1,5 +1,5 @@
 
-export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://elitefoundationuganda.online'): string => {
+export const createAbsoluteUrl = (path: string, baseUrl: string = 'https://www.elitefoundationuganda.org'): string => {
   return path.startsWith('http') ? path : `${baseUrl}${path}`;
 };
 
@@ -8,7 +8,7 @@ const coreKeywords = [
   // General Keywords
   'Elite Foundation',
   'Elite Foundation Online',
-  'elitefoundationuganda.online',
+  'www.elitefoundationuganda.org',
   'Elite Foundation Uganda',
   'nonprofit organization',
   'charitable foundation',

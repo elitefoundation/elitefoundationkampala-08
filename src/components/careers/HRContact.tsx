@@ -15,17 +15,17 @@ const HRContact = () => {
           <h3 className="text-xl font-bold text-gray-900">Grace Nambi</h3>
           <p className="text-gray-600 mb-4">HR & Operations Manager</p>
           <div className="flex flex-col space-y-3">
-            <a href="mailto:Kimeragodfreyadams@gmail.com" className="flex items-center text-gray-700 hover:text-orange-600">
+            <a href="mailto:elitefoundation256@gmail.com" className="flex items-center text-gray-700 hover:text-orange-600">
               <Mail className="w-5 h-5 mr-2" />
-              Kimeragodfreyadams@gmail.com
+              elitefoundation256@gmail.com
             </a>
             <a href="tel:+256762080041" className="flex items-center text-gray-700 hover:text-orange-600">
               <Phone className="w-5 h-5 mr-2" />
-              +256 762 080 041
+              +256 762 080041
             </a>
             <a href="tel:+256706196708" className="flex items-center text-gray-700 hover:text-orange-600">
               <Phone className="w-5 h-5 mr-2" />
-              +256 706 196 708
+              +256 706 196708
             </a>
           </div>
         </div>

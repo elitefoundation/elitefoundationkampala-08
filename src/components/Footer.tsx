@@ -93,14 +93,14 @@ const Footer = () => {
                   className="flex items-center hover:text-[#D2FF00] transition-colors"
                 >
                   <Mail className="w-4 h-4 mr-3 text-[#D2FF00]" />
-                  <span>Kimeragodfreyadams@gmail.com</span>
+                  <span>elitefoundation256@gmail.com</span>
                 </button>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
                   className="flex items-center hover:text-[#D2FF00] transition-colors"
                 >
                   <Phone className="w-4 h-4 mr-3 text-[#D2FF00]" />
-                  <span>+256 762 080 041 / +256 706 196 708</span>
+                  <span>+256 762 080041 / +256 706 196708</span>
                 </button>
               </div>
               

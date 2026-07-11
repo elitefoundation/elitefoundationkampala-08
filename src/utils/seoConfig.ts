@@ -1,6 +1,6 @@
 export const SEO_CONFIG = {
   // Base configuration
-  baseUrl: 'https://elitefoundation.org',
+  baseUrl: 'https://www.elitefoundationuganda.org',
   organizationName: 'Elite Foundation',
   organizationAlternateName: 'Elite Foundation Kampala',
   defaultLanguage: 'en',
@@ -8,8 +8,8 @@ export const SEO_CONFIG = {
   
   // Contact information
   contact: {
-    email: 'info@elitefoundation.org',
-    phone: '+256-XXX-XXX-XXX', // Update with actual phone number
+    email: 'elitefoundation256@gmail.com',
+    phone: '+256 762 080041', // Official phone number
     address: {
       country: 'UG',
       region: 'Kampala',
