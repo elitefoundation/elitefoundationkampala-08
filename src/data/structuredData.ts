@@ -3,14 +3,14 @@ export const createOrganizationStructuredData = () => ({
   '@type': 'NGO',
   name: 'Elite Foundation',
   alternateName: 'Elite Foundation Uganda',
-  url: 'https://elitefoundationuganda.online',
+  url: 'https://www.elitefoundationuganda.org',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://elitefoundationuganda.online/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
+    url: 'https://www.elitefoundationuganda.org/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
     width: 1200,
     height: 1200
   },
-  image: 'https://elitefoundationuganda.online/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
+  image: 'https://www.elitefoundationuganda.org/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
   description: 'Transforming children\'s lives through excellence, care, education, and community development',
   mission: 'To transform the lives of children through excellence, care, education, health, protection, and community development programs',
   foundingDate: '2020',
@@ -20,13 +20,13 @@ export const createOrganizationStructuredData = () => ({
     {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'info@elitefoundationuganda.online',
+      email: 'elitefoundation256@gmail.com',
       availableLanguage: 'English'
     },
     {
       '@type': 'ContactPoint',
       contactType: 'general',
-      email: 'contact@elitefoundationuganda.online',
+      email: 'elitefoundation256@gmail.com',
       availableLanguage: 'English'
     }
   ],
@@ -140,18 +140,18 @@ export const createBlogPostStructuredData = (
   author: {
     '@type': 'Organization',
     name: author || 'Elite Foundation',
-    url: 'https://elitefoundationuganda.online'
+    url: 'https://www.elitefoundationuganda.org'
   },
   publisher: {
     '@type': 'Organization',
     name: 'Elite Foundation',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elitefoundationuganda.online/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
+      url: 'https://www.elitefoundationuganda.org/lovable-uploads/efbbe5d8-fd40-4008-bd87-a85de6f1ca90.png',
       width: 1200,
       height: 1200
     },
-    url: 'https://elitefoundationuganda.online'
+    url: 'https://www.elitefoundationuganda.org'
   },
   description: description,
   keywords: keywords.join(', '),
@@ -184,7 +184,7 @@ export const createEducationCenterFAQData = () => ({
       name: 'How can children enroll in Elite Foundation programs?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Families can contact Elite Foundation directly through our website, email at info@elitefoundation.org, or visit our office in Kampala. We work with families to ensure children have access to quality programs regardless of their financial situation.'
+        text: 'Families can contact Elite Foundation directly through our website, email at elitefoundation256@gmail.com, or visit our office in Kampala. We work with families to ensure children have access to quality programs regardless of their financial situation.'
       }
     },
     {

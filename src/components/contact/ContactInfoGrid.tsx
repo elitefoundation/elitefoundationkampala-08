@@ -8,14 +8,14 @@ const ContactInfoGrid = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: ["+256 762 080 041", "+256 706 196 708"],
+      details: ["+256 762 080041", "+256 706 196708"],
       color: "bg-blue-100 text-blue-600",
       onClick: () => redirectToWhatsApp("general")
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: ["Kimeragodfreyadams@gmail.com"],
+      details: ["elitefoundation256@gmail.com"],
       color: "bg-green-100 text-green-600",
       onClick: () => redirectToWhatsApp("general")
     },

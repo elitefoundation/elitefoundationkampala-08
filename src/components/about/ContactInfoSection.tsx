@@ -17,12 +17,12 @@ const ContactInfoSection = () => {
         </div>
         <div className="bg-green-50 rounded-xl p-6 border border-green-200 text-center">
           <h4 className="font-bold text-green-900 mb-2">Email</h4>
-          <p className="text-green-800">Kimeragodfreyadams@gmail.com</p>
+          <p className="text-green-800">elitefoundation256@gmail.com</p>
         </div>
         <div className="bg-orange-50 rounded-xl p-6 border border-orange-200 text-center">
           <h4 className="font-bold text-orange-900 mb-2">Phone</h4>
-          <p className="text-orange-800">+256 762 080 041</p>
-          <p className="text-orange-800">+256 706 196 708</p>
+          <p className="text-orange-800">+256 762 080041</p>
+          <p className="text-orange-800">+256 706 196708</p>
         </div>
       </div>
     </motion.div>
