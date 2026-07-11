@@ -33,21 +33,24 @@ const DonationImpactSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-orange-500 to-red-500 text-white">
+    <section className="py-24 bg-[#101400] text-white relative overflow-hidden font-space uppercase tracking-wider border-b border-stone-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Your Donation Creates Real Impact</h2>
-          <p className="text-orange-100 max-w-2xl mx-auto text-lg">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-[#D2FF00] text-black font-black uppercase text-xs tracking-widest rounded-none shadow-[0_0_10px_rgba(210,255,0,0.15)]">
+            Giving
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black mb-6">Your Donation <span className="text-[#D2FF00] italic font-serif lowercase normal-case">Creates Real Impact</span></h2>
+          <p className="text-stone-400 max-w-2xl mx-auto normal-case font-bold tracking-normal text-xs md:text-sm">
             See exactly how your generosity transforms lives and builds stronger communities
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-3 gap-2 md:gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-6xl mx-auto">
           {donationTiers.map((tier, index) => (
             <motion.div
               key={index}
@@ -55,24 +58,23 @@ const DonationImpactSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300">
-                <CardContent className="p-3 md:p-6 text-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4">
+              <Card className="h-full bg-[#1a1c16] border border-stone-800 hover:border-[#D2FF00]/40 rounded-none transition-all duration-300 transform hover:-translate-y-1 text-center">
+                <CardContent className="p-8 flex flex-col justify-between h-full">
+                  <div className="w-14 h-14 bg-stone-900 border border-[#D2FF00]/20 text-[#D2FF00] rounded-none flex items-center justify-center mx-auto mb-6">
                     {tier.icon}
                   </div>
-                  <h3 className="text-sm md:text-2xl font-bold mb-1 md:mb-3">{tier.amount}</h3>
-                  <p className="text-white/90 text-xs md:text-sm line-clamp-3 md:line-clamp-none">{tier.impact}</p>
+                  <h3 className="text-2xl font-black mb-4 tracking-widest text-[#D2FF00]">{tier.amount}</h3>
+                  <p className="text-stone-400 text-xs normal-case leading-relaxed font-semibold tracking-normal">{tier.impact}</p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
         
-        <div className="text-center">
+        <div className="text-center pt-4">
           <Link to="/donate">
             <Button 
-              size="lg" 
-              className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 text-lg"
+              className="rounded-none bg-[#D2FF00] text-black hover:bg-white hover:text-black hover:shadow-neon-glow-lg px-10 py-6 text-xs font-black uppercase tracking-widest transition-all duration-300 transform hover:-translate-y-0.5"
             >
               Make a Donation Today
             </Button>

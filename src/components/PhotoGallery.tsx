@@ -281,16 +281,19 @@ const PhotoGallery = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-24 bg-[#101400] text-white relative overflow-hidden font-space uppercase tracking-wider border-b border-stone-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Our Impact in Pictures</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-[#D2FF00] text-black font-black uppercase text-xs tracking-widest rounded-none shadow-[0_0_10px_rgba(210,255,0,0.15)]">
+            Visual Archive
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black mb-6">Our Impact <span className="text-[#D2FF00] italic font-serif lowercase normal-case">in Pictures</span></h2>
+          <p className="text-stone-400 max-w-2xl mx-auto normal-case font-bold tracking-normal text-xs md:text-sm">
             See the real faces and stories behind our ministry's work across Uganda
           </p>
         </motion.div>
@@ -303,10 +306,12 @@ const PhotoGallery = () => {
           }}
         />
 
-        <PhotoGrid 
-          images={filteredImages}
-          onImageSelect={setSelectedImage}
-        />
+        <div className="mt-8">
+          <PhotoGrid
+            images={filteredImages}
+            onImageSelect={setSelectedImage}
+          />
+        </div>
 
         <PhotoLightbox
           selectedImage={selectedImage}

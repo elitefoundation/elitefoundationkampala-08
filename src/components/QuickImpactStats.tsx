@@ -32,11 +32,11 @@ const QuickImpactStats = () => {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-[#101400] text-white border-b border-[#D2FF00]/10 font-space uppercase tracking-wider">
       {/* Background with subtle pattern */}
-      <div className="absolute inset-0 bg-gray-50">
+      <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `url('/lovable-uploads/39671993-1bb4-4bb6-8819-3ca5c07c0042.png')`,
             backgroundSize: 'cover',
@@ -44,7 +44,7 @@ const QuickImpactStats = () => {
             backgroundRepeat: 'no-repeat'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-50/90 to-gray-50/90" />
+        <div className="absolute inset-0 bg-[#101400]/90" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -52,15 +52,18 @@ const QuickImpactStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Our Impact at a Glance</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-[#D2FF00] text-black font-black uppercase text-xs tracking-widest rounded-none">
+            Metrics & Achievements
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black mb-6">Our Impact <span className="text-[#D2FF00] italic font-serif lowercase normal-case">at a Glance</span></h2>
+          <p className="text-stone-400 max-w-2xl mx-auto normal-case font-bold tracking-normal text-xs md:text-sm">
             See the real difference your support makes in the lives of children and families across Uganda
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -68,13 +71,13 @@ const QuickImpactStats = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-white/50">
-                <CardContent className="p-4 lg:p-6">
-                  <div className={`w-12 h-12 ${stat.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+              <Card className="text-center bg-[#1a1c16] rounded-none border border-stone-800 hover:border-[#D2FF00]/40 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-neon-glow">
+                <CardContent className="p-6 md:p-8">
+                  <div className={`w-12 h-12 bg-[#D2FF00]/5 border border-[#D2FF00]/20 text-[#D2FF00] rounded-none flex items-center justify-center mx-auto mb-4`}>
                     {stat.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-1">{stat.number}</h3>
-                  <p className="text-gray-600 text-sm">{stat.label}</p>
+                  <h3 className="text-3xl md:text-4xl font-black mb-2 text-white">{stat.number}</h3>
+                  <p className="text-stone-400 text-[10px] font-black tracking-widest">{stat.label}</p>
                 </CardContent>
               </Card>
             </motion.div>
