@@ -89,44 +89,49 @@ const Hero = () => {
         }}></div>
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-stone-100 to-orange-200 bg-clip-text text-transparent text-center my-[70px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col justify-center min-h-screen pt-24 pb-16">
+        <div className="max-w-5xl mx-auto animate-fade-in text-center">
+          {/* Floating neon accent bar */}
+          <div className="inline-block mb-6 px-4 py-1.5 bg-[#D2FF00] text-black font-black uppercase text-xs tracking-widest rounded-none shadow-[0_0_15px_rgba(210,255,0,0.4)]">
+            Kampala, Uganda
+          </div>
+
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 leading-[0.9] tracking-tighter uppercase font-space text-center my-[20px]">
             Transforming Lives Through
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+            <span className="block text-[#D2FF00] stroke-text mt-2 font-black">
               Excellence & Care
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 text-stone-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl lg:text-2xl mb-10 text-stone-200 max-w-3xl mx-auto leading-relaxed font-bold tracking-normal uppercase text-center">
             Elite Foundation is dedicated to improving the lives of children through 
             education, health, protection, and community development programs that create lasting impact.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 hover:shadow-orange-glow text-white px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 uppercase tracking-wider text-xs font-black">
+            <Button asChild size="lg" className="bg-[#D2FF00] text-black hover:bg-white hover:text-black hover:shadow-neon-glow-lg rounded-none px-10 py-7 text-xs font-black transition-all duration-300 transform hover:-translate-y-1">
               <Link to="/donate">
-                Make a Difference <Heart className="ml-2 h-5 w-5" />
+                Make a Difference <Heart className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             
-            <Button asChild variant="glass" size="lg" className="bg-stone-100/10 backdrop-blur-md border border-stone-300/30 text-white hover:bg-stone-100/20 px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300">
+            <Button asChild variant="outline" size="lg" className="bg-transparent border-2 border-white text-white hover:bg-[#D2FF00] hover:text-black hover:border-[#D2FF00] rounded-none px-10 py-7 text-xs font-black transition-all duration-300 transform hover:-translate-y-1">
               <Link to="/about">
-                Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
           
           {/* Image Navigation Indicators */}
-          <div className="flex justify-center space-x-2 mb-8">
+          <div className="flex justify-center space-x-3 mb-16">
             {heroImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`h-1.5 transition-all duration-300 rounded-none ${
                   index === currentImageIndex 
-                    ? 'bg-orange-400 shadow-lg shadow-orange-400/50' 
-                    : 'bg-white/30 hover:bg-white/50'
+                    ? 'w-10 bg-[#D2FF00] shadow-[0_0_10px_#D2FF00]'
+                    : 'w-4 bg-white/30 hover:bg-white/60'
                 }`}
                 aria-label={`View image ${index + 1}: ${heroImages[index].title}`}
               />
@@ -134,23 +139,23 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-2 md:gap-6 mt-16">
-            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
-              <Users className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">24+</div>
-              <div className="text-stone-300">Children Supported</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto uppercase tracking-wider">
+            <div className="bg-[#101400]/80 backdrop-blur-md border border-[#D2FF00]/20 rounded-none p-8 hover:border-[#D2FF00]/50 transition-all duration-300 text-center">
+              <Users className="h-7 w-7 text-[#D2FF00] mb-4 mx-auto" />
+              <div className="text-4xl font-black text-white mb-2">24+</div>
+              <div className="text-stone-400 text-xs font-bold tracking-widest">Children Supported</div>
             </div>
             
-            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
-              <BookOpen className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">95%</div>
-              <div className="text-stone-300">School Enrollment</div>
+            <div className="bg-[#101400]/80 backdrop-blur-md border border-[#D2FF00]/20 rounded-none p-8 hover:border-[#D2FF00]/50 transition-all duration-300 text-center">
+              <BookOpen className="h-7 w-7 text-[#D2FF00] mb-4 mx-auto" />
+              <div className="text-4xl font-black text-white mb-2">95%</div>
+              <div className="text-stone-400 text-xs font-bold tracking-widest">School Enrollment</div>
             </div>
             
-            <div className="bg-stone-100/5 backdrop-blur-md border border-stone-300/20 rounded-lg p-6 hover:bg-stone-100/10 transition-all duration-300">
-              <Heart className="h-8 w-8 text-orange-400 mb-3 mx-auto" />
-              <div className="text-3xl font-bold text-orange-400 mb-2">1</div>
-              <div className="text-stone-300">Communities Served</div>
+            <div className="bg-[#101400]/80 backdrop-blur-md border border-[#D2FF00]/20 rounded-none p-8 hover:border-[#D2FF00]/50 transition-all duration-300 text-center">
+              <Heart className="h-7 w-7 text-[#D2FF00] mb-4 mx-auto" />
+              <div className="text-4xl font-black text-white mb-2">1</div>
+              <div className="text-stone-400 text-xs font-bold tracking-widest">Communities Served</div>
             </div>
           </div>
 

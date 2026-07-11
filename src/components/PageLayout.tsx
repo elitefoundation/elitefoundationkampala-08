@@ -28,7 +28,7 @@ const PageLayout = ({ children, backgroundImage }: PageLayoutProps) => {
       )}
       
       {/* Content Container */}
-      <div className={`relative z-10 min-h-screen ${!backgroundImage ? 'bg-gradient-to-b from-wrlds-light via-stone-50 to-stone-100' : ''}`}>
+      <div className={`relative z-10 min-h-screen bg-[#F4F4ED] ${!backgroundImage ? 'liquid-waves-bg' : ''}`}>
         <Navbar />
         <main className="flex-1">
           {children}

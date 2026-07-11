@@ -44,16 +44,19 @@ const TestimonialsCarousel = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-orange-50 to-red-50">
+    <section className="py-24 bg-[#101400] text-white relative overflow-hidden font-space uppercase tracking-wider border-b border-stone-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4">Voices of Hope</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-[#D2FF00] text-black font-black uppercase text-xs tracking-widest rounded-none shadow-[0_0_10px_rgba(210,255,0,0.15)]">
+            Testimonials
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black mb-6">Voices of <span className="text-[#D2FF00] italic font-serif lowercase normal-case">Hope</span></h2>
+          <p className="text-stone-400 max-w-2xl mx-auto normal-case font-bold tracking-normal text-xs md:text-sm">
             Hear directly from the children whose lives have been transformed through our ministry's love and support
           </p>
         </motion.div>
@@ -63,21 +66,23 @@ const TestimonialsCarousel = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
-                  <Card className="mx-2">
-                    <CardContent className="p-8">
-                      <div className="flex flex-col md:flex-row items-center gap-6">
+                  <Card className="mx-2 bg-[#1a1c16] rounded-none border border-stone-800">
+                    <CardContent className="p-8 md:p-12">
+                      <div className="flex flex-col md:flex-row items-center gap-8 text-left">
                         <div 
-                          className="w-24 h-24 bg-cover bg-center rounded-full flex-shrink-0"
+                          className="w-28 h-24 md:w-32 md:h-32 bg-cover bg-center rounded-none border-2 border-[#D2FF00] flex-shrink-0 shadow-[4px_4px_0px_#101400]"
                           style={{ backgroundImage: `url('${testimonial.image}')` }}
                         />
                         <div className="flex-1 text-center md:text-left">
-                          <Quote className="w-8 h-8 text-orange-500 mb-4 mx-auto md:mx-0" />
-                          <p className="text-gray-700 italic mb-4 text-lg leading-relaxed">
+                          <Quote className="w-8 h-8 text-[#D2FF00] mb-4 mx-auto md:mx-0 opacity-80" />
+                          <p className="text-stone-300 italic mb-6 text-sm md:text-base leading-relaxed normal-case font-semibold tracking-normal">
                             "{testimonial.content}"
                           </p>
-                          <div>
-                            <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                            <p className="text-orange-600 text-sm">{testimonial.role}</p>
+                          <div className="border-t border-stone-800 pt-4 flex flex-col md:flex-row justify-between items-center">
+                            <div>
+                              <h4 className="font-black text-white tracking-widest text-sm uppercase">{testimonial.name}</h4>
+                              <p className="text-[#D2FF00] text-xs font-bold tracking-widest mt-1 uppercase">{testimonial.role}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -86,8 +91,8 @@ const TestimonialsCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="hidden md:flex rounded-none border-stone-800 bg-[#101400] text-white hover:bg-[#D2FF00] hover:text-black hover:border-[#D2FF00]" />
+            <CarouselNext className="hidden md:flex rounded-none border-stone-800 bg-[#101400] text-white hover:bg-[#D2FF00] hover:text-black hover:border-[#D2FF00]" />
           </Carousel>
         </div>
       </div>

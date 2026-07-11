@@ -36,6 +36,14 @@
     --ring: 0 0% 50%;
 
     --radius: 0.5rem;
+
+    /* Lando Norris Clone inspired color system */
+    --ln-yellow: #D2FF00;
+    --ln-dark: #101400;
+    --ln-cream: #F4F4ED;
+    --ln-onyx: #111112;
+    --ln-dark-gray: #535450;
+    --ln-slate: #747282;
   }
 }
 
@@ -501,4 +509,76 @@ button, .btn, [role="button"] {
 
 .btn-group .liquid-morph:not(:hover) {
   filter: brightness(0.9);
+}
+
+/* Lando Norris Clone inspired premium visual utilities */
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+
+.stroke-text-dark {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.25);
+  color: transparent;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes background-float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1.05);
+  }
+  33% {
+    transform: translate(-1%, 1%) rotate(1deg) scale(1.08);
+  }
+  66% {
+    transform: translate(1%, -0.5%) rotate(-0.5deg) scale(1.05);
+  }
+}
+
+.animate-background-float {
+  animation: background-float 25s ease-in-out infinite;
+}
+
+.liquid-waves-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-waves-bg::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(ellipse at center, rgba(210, 255, 0, 0.08) 0%, transparent 60%);
+  animation: background-float 15s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* High contrast neon border shadows */
+.shadow-neon-glow {
+  box-shadow: 0 0 15px rgba(210, 255, 0, 0.25);
+}
+
+.shadow-neon-glow-lg {
+  box-shadow: 0 0 30px rgba(210, 255, 0, 0.4);
+}
+
+/* Glass card layout with dark overlay option */
+.glass-ln-dark {
+  background: rgba(16, 20, 0, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(210, 255, 0, 0.15);
+}
+
+.glass-ln-light {
+  background: rgba(244, 244, 237, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }

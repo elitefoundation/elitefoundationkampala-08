@@ -75,143 +75,143 @@ const Footer = () => {
 
   return (
     <>
-      <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8 w-full">
+      <footer id="contact" className="bg-[#101400] text-white pt-24 pb-12 w-full border-t border-[#D2FF00]/10 font-space uppercase tracking-wider text-xs">
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
-            <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-orange-400">ELITE FOUNDATION</h3>
-              <p className="text-gray-300 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
+            <div className="lg:col-span-2 text-left">
+              <h3 className="text-3xl font-black mb-6 text-[#D2FF00] tracking-widest font-space">ELITE FOUNDATION</h3>
+              <p className="text-stone-400 mb-8 normal-case text-sm leading-relaxed tracking-normal font-medium max-w-lg">
                 Transforming lives through excellence and care. We are dedicated to nurturing, protecting, and empowering children through comprehensive programs that address their educational, health, and developmental needs.
               </p>
-              <div className="space-y-3 text-gray-300">
+              <div className="space-y-4 text-stone-300 text-xs font-black">
                 <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-orange-400" />
+                  <MapPin className="w-4 h-4 mr-3 text-[#D2FF00]" />
                   <span>Nansana Wakiso Uganda</span>
                 </div>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
-                  className="flex items-center hover:text-orange-400 transition-colors"
+                  className="flex items-center hover:text-[#D2FF00] transition-colors"
                 >
-                  <Mail className="w-5 h-5 mr-3 text-orange-400" />
+                  <Mail className="w-4 h-4 mr-3 text-[#D2FF00]" />
                   <span>Kimeragodfreyadams@gmail.com</span>
                 </button>
                 <button 
                   onClick={() => redirectToWhatsApp("general")}
-                  className="flex items-center hover:text-orange-400 transition-colors"
+                  className="flex items-center hover:text-[#D2FF00] transition-colors"
                 >
-                  <Phone className="w-5 h-5 mr-3 text-orange-400" />
+                  <Phone className="w-4 h-4 mr-3 text-[#D2FF00]" />
                   <span>+256 762 080 041 / +256 706 196 708</span>
                 </button>
               </div>
               
               {/* Social Media Links */}
-              <div className="flex space-x-4 mt-6">
+              <div className="flex space-x-4 mt-8">
                 <a 
                   href="https://www.facebook.com/share/184Xgi7v6U/?mibextid=wwXIfr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-orange-400 transition-colors" 
+                  className="w-10 h-10 bg-stone-900 border border-stone-800 text-stone-400 hover:text-black hover:bg-[#D2FF00] hover:border-[#D2FF00] flex items-center justify-center transition-all duration-300 rounded-none shadow-[0_0_10px_rgba(0,0,0,0.5)] transform hover:-translate-y-1"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Facebook className="w-4 h-4" />
                 </a>
                 <a 
                   href="https://www.instagram.com/elite_foundation_uganda?igsh=YzM1c2Q0MmpoNG5n&utm_source=qr" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-orange-400 transition-colors" 
+                  className="w-10 h-10 bg-stone-900 border border-stone-800 text-stone-400 hover:text-black hover:bg-[#D2FF00] hover:border-[#D2FF00] flex items-center justify-center transition-all duration-300 rounded-none shadow-[0_0_10px_rgba(0,0,0,0.5)] transform hover:-translate-y-1"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-4 h-4" />
                 </a>
               </div>
             </div>
             
-            <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Get Involved</h3>
-              <ul className="space-y-3 mb-6">
-                <li><Link to="/donate" className="text-gray-300 hover:text-orange-400 transition-colors">Make a Donation</Link></li>
+            <div className="text-left">
+              <h3 className="text-sm font-black mb-6 text-white tracking-widest border-b border-stone-800 pb-2">Get Involved</h3>
+              <ul className="space-y-4 mb-8">
+                <li><Link to="/donate" className="text-stone-300 hover:text-[#D2FF00] transition-colors flex items-center"><ArrowRight className="w-3 h-3 mr-2" /> Make a Donation</Link></li>
                 <li>
                   <button 
                     onClick={() => redirectToWhatsApp("sponsor")}
-                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                    className="text-stone-300 hover:text-[#D2FF00] transition-colors text-left flex items-center"
                   >
-                    Sponsor a Child
+                    <ArrowRight className="w-3 h-3 mr-2" /> Sponsor a Child
                   </button>
                 </li>
                 <li>
                   <button 
                     onClick={() => redirectToWhatsApp("volunteer")}
-                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                    className="text-stone-300 hover:text-[#D2FF00] transition-colors text-left flex items-center"
                   >
-                    Volunteer
+                    <ArrowRight className="w-3 h-3 mr-2" /> Volunteer
                   </button>
                 </li>
                 <li>
                   <button 
                     onClick={() => redirectToWhatsApp("event")}
-                    className="text-gray-300 hover:text-orange-400 transition-colors text-left"
+                    className="text-stone-300 hover:text-[#D2FF00] transition-colors text-left flex items-center"
                   >
-                    Upcoming Events
+                    <ArrowRight className="w-3 h-3 mr-2" /> Upcoming Events
                   </button>
                 </li>
               </ul>
               <Button 
                 onClick={handleDonateClick}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium"
+                className="w-full bg-[#D2FF00] hover:bg-white text-black font-black uppercase text-[10px] tracking-widest rounded-none py-6 border-0"
               >
                 Donate Now
               </Button>
             </div>
             
-            <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Newsletter</h3>
-              <p className="text-gray-300 text-sm mb-4">
+            <div className="text-left">
+              <h3 className="text-sm font-black mb-6 text-white tracking-widest border-b border-stone-800 pb-2">Newsletter</h3>
+              <p className="text-stone-400 text-[11px] normal-case tracking-normal mb-4 leading-relaxed font-medium">
                 Stay updated with our latest news and impact stories.
               </p>
-              <form onSubmit={handleSubscribe} className="space-y-3">
+              <form onSubmit={handleSubscribe} className="space-y-3 mb-6">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-3 bg-stone-900/50 border border-stone-800 rounded-none text-white placeholder-stone-600 focus:outline-none focus:border-[#D2FF00] transition-colors uppercase tracking-wider text-[10px] font-black"
                   disabled={isSubmitting}
                 />
                 <Button
                   type="submit"
                   disabled={isSubmitting || !email}
-                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-50"
+                  className="w-full bg-stone-800 hover:bg-[#D2FF00] text-white hover:text-black font-black uppercase text-[10px] tracking-widest rounded-none py-5 border-0 disabled:opacity-30"
                 >
                   {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
               </form>
               
-              <div className="mt-6">
-                <h4 className="text-sm font-semibold mb-3 text-white">Quick Links</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
-                  <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Our Programs</Link></li>
-                  <li><Link to="/impact" className="text-gray-300 hover:text-orange-400 transition-colors">Our Impact</Link></li>
-                  <li><Link to="/testimonials" className="text-gray-300 hover:text-orange-400 transition-colors">Success Stories</Link></li>
-                  <li><Link to="/resources" className="text-gray-300 hover:text-orange-400 transition-colors">Resources</Link></li>
+              <div className="mt-8">
+                <h4 className="text-[10px] font-black mb-4 text-white tracking-widest">Quick Links</h4>
+                <ul className="space-y-3 text-stone-400 font-bold">
+                  <li><Link to="/about" className="hover:text-[#D2FF00] transition-colors">About Us</Link></li>
+                  <li><Link to="/programs" className="hover:text-[#D2FF00] transition-colors">Our Programs</Link></li>
+                  <li><Link to="/impact" className="hover:text-[#D2FF00] transition-colors">Our Impact</Link></li>
+                  <li><Link to="/testimonials" className="hover:text-[#D2FF00] transition-colors">Success Stories</Link></li>
+                  <li><Link to="/resources" className="hover:text-[#D2FF00] transition-colors">Resources</Link></li>
                 </ul>
               </div>
             </div>
           </div>
           
-          <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm mb-2">
+          <div className="pt-12 flex flex-col md:flex-row justify-between items-center text-stone-500 font-bold">
+            <div className="mb-4 md:mb-0 text-center md:text-left">
+              <p className="text-stone-400 text-[10px] mb-2 tracking-widest font-black">
                 © {new Date().getFullYear()} Elite Foundation. All rights reserved.
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[10px] tracking-widest">
                 Registered Non-Profit Organization | Excellence in Action
               </p>
             </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</Link>
-              <Link to="/contact" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Contact Us</Link>
+            <div className="flex space-x-6 tracking-widest text-[10px] font-black">
+              <Link to="/privacy-policy" className="text-stone-400 hover:text-[#D2FF00] transition-colors">Privacy Policy</Link>
+              <Link to="/contact" className="text-stone-400 hover:text-[#D2FF00] transition-colors">Contact Us</Link>
             </div>
           </div>
           
